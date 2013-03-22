@@ -23,7 +23,6 @@
 		887BA3BA16F9EAB9003885EE /* _D_viewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 887BA3B916F9EAB9003885EE /* _D_viewerTests.m */; };
 		887BA3C416F9EDEC003885EE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887BA3C316F9EDEC003885EE /* OpenGLES.framework */; };
 		887BA3C616F9EDF9003885EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887BA3C516F9EDF9003885EE /* QuartzCore.framework */; };
-		887BA3C816F9EF67003885EE /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887BA3C716F9EF67003885EE /* NinevehGL.framework */; };
 		887BA3CA16F9F261003885EE /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3C916F9F261003885EE /* Storyboard-iPad.storyboard */; };
 		887BA3CF16F9F3CC003885EE /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887BA3CE16F9F3CC003885EE /* DViewController.m */; };
 		887BA3D216F9FAA3003885EE /* skull.obj in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3D116F9FAA3003885EE /* skull.obj */; };
@@ -36,6 +35,7 @@
 		887BA3E416FB30CA003885EE /* cube_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3DC16FB30CA003885EE /* cube_left.jpg */; };
 		887BA3E516FB30CA003885EE /* cube_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3DD16FB30CA003885EE /* cube_right.jpg */; };
 		887BA3E616FB30CA003885EE /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3DE16FB30CA003885EE /* cube_top.jpg */; };
+		887BA3EB16FC5734003885EE /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887BA3EA16FC5734003885EE /* NinevehGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		887BA3B916F9EAB9003885EE /* _D_viewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _D_viewerTests.m; sourceTree = "<group>"; };
 		887BA3C316F9EDEC003885EE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		887BA3C516F9EDF9003885EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		887BA3C716F9EF67003885EE /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NinevehGL.framework; path = "../../../../../../Library/Developer/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks/NinevehGL.framework"; sourceTree = "<group>"; };
 		887BA3C916F9F261003885EE /* Storyboard-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Storyboard-iPad.storyboard"; path = "Storyboard/Storyboard-iPad.storyboard"; sourceTree = "<group>"; };
 		887BA3CD16F9F3CC003885EE /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
 		887BA3CE16F9F3CC003885EE /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		887BA3DC16FB30CA003885EE /* cube_left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_left.jpg; sourceTree = "<group>"; };
 		887BA3DD16FB30CA003885EE /* cube_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_right.jpg; sourceTree = "<group>"; };
 		887BA3DE16FB30CA003885EE /* cube_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_top.jpg; sourceTree = "<group>"; };
+		887BA3EA16FC5734003885EE /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NinevehGL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				887BA3C816F9EF67003885EE /* NinevehGL.framework in Frameworks */,
+				887BA3EB16FC5734003885EE /* NinevehGL.framework in Frameworks */,
 				887BA3C616F9EDF9003885EE /* QuartzCore.framework in Frameworks */,
 				887BA3C416F9EDEC003885EE /* OpenGLES.framework in Frameworks */,
 				887BA38F16F9EAB9003885EE /* UIKit.framework in Frameworks */,
@@ -120,9 +120,6 @@
 				887BA39516F9EAB9003885EE /* Supporting Files */,
 				887BA3D016F9FA60003885EE /* 3D Models */,
 				887BA3CB16F9F26A003885EE /* Storyboard */,
-				887BA3C716F9EF67003885EE /* NinevehGL.framework */,
-				887BA3C516F9EDF9003885EE /* QuartzCore.framework */,
-				887BA3C316F9EDEC003885EE /* OpenGLES.framework */,
 				887BA39416F9EAB9003885EE /* 3D viewer */,
 				887BA3B216F9EAB9003885EE /* 3D viewerTests */,
 				887BA38D16F9EAB9003885EE /* Frameworks */,
@@ -142,6 +139,9 @@
 		887BA38D16F9EAB9003885EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				887BA3EA16FC5734003885EE /* NinevehGL.framework */,
+				887BA3C516F9EDF9003885EE /* QuartzCore.framework */,
+				887BA3C316F9EDEC003885EE /* OpenGLES.framework */,
 				887BA38E16F9EAB9003885EE /* UIKit.framework */,
 				887BA39016F9EAB9003885EE /* Foundation.framework */,
 				887BA39216F9EAB9003885EE /* CoreGraphics.framework */,
@@ -457,6 +457,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(LOCAL_DEVELOPER_DIR)/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "3D viewer/3D viewer-Prefix.pch";
@@ -473,6 +474,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(LOCAL_DEVELOPER_DIR)/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "3D viewer/3D viewer-Prefix.pch";

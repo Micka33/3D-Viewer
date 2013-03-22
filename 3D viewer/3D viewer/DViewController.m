@@ -52,7 +52,6 @@
     _tmpLastScale = 1.0f;
     _scale = 0.0f;
 
-
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [_panRecognizer setMinimumNumberOfTouches:1];
     [_panRecognizer setMaximumNumberOfTouches:1];
@@ -140,8 +139,8 @@
     static float increment = 0.0f;
     ++increment;
     NGLLight *defaultLight = [NGLLight defaultLight];
-    defaultLight.x = sinf(increment* 0.05f)*5.0f;
-    defaultLight.y = cosf(increment* 0.05f)*5.0f;
+    defaultLight.x = sinf(increment*0.05f)*5.0f;
+    defaultLight.y = cosf(increment*0.05f)*5.0f;
     
     if (_DModel.x > self.view.frame.size.width)
         _DModel.x = self.view.frame.size.width;
@@ -187,8 +186,10 @@
 							  kNGLMeshCentralizeYes, kNGLMeshKeyCentralize,
 							  @"0.3", kNGLMeshKeyNormalize,
 							  nil];
+
 	//_DModel = [[NGLMesh alloc]      initWithFile:@"cube.obj" settings:settings delegate:nil];
     _DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
+    
     _camera = [[NGLCamera alloc]    initWithMeshes:_DModel, nil];
 	[_camera autoAdjustAspectRatio:YES animated:YES];
 

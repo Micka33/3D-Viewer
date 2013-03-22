@@ -38,6 +38,8 @@
         shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (void)handlePinch:(UIPanGestureRecognizer *)recognizer;
+- (void)handleRotation:(UIPanGestureRecognizer *)recognizer;
 /*
 - (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
 - (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer;
