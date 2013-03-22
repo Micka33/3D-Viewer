@@ -138,9 +138,9 @@
 
     static float increment = 0.0f;
     ++increment;
-    NGLLight *defaultLight = [NGLLight defaultLight];
-    defaultLight.x = sinf(increment*0.05f)*5.0f;
-    defaultLight.y = cosf(increment*0.05f)*5.0f;
+    //NGLLight *defaultLight = [NGLLight defaultLight];
+    //defaultLight.x = sinf(increment*0.05f)*5.0f;
+    //defaultLight.y = cosf(increment*0.05f)*5.0f;
     
     if (_DModel.x > self.view.frame.size.width)
         _DModel.x = self.view.frame.size.width;
@@ -169,37 +169,40 @@
 	[self.view addGestureRecognizer:_rotationRecognizer];
 	[self.view addGestureRecognizer:_pinchRecognizer];
 
-    NGLFog *defaultFog = [NGLFog defaultFog];
-    defaultFog.type = NGLFogTypeLinear;
-    defaultFog.start = 10.0f;
-    defaultFog.end = 15.0f;
+    //NGLFog *defaultFog = [NGLFog defaultFog];
+    //defaultFog.type = NGLFogTypeLinear;
+    //defaultFog.start = 10.0f;
+    //defaultFog.end = 15.0f;
     
     nglGlobalTextureOptimize(NGLTextureOptimizeNone);
-    nglGlobalLightEffects(NGLLightEffectsON);
-    nglGlobalFrontAndCullFace(NGLFrontFaceCCW, NGLCullFaceBack);
+    nglGlobalLightEffects(NGLLightEffectsOFF);
+    //nglGlobalFrontAndCullFace(NGLFrontFaceCCW, NGLCullFaceBack);
     nglGlobalFlush();
 
     // Setting the loading process parameters. To take advantage of the NGL Binary feature,
 	// remove the line "kNGLMeshOriginalYes, kNGLMeshKeyOriginal,". Your mesh will be loaded 950% faster.
 	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
-							  //kNGLMeshOriginalYes, kNGLMeshKeyOriginal,
+							  kNGLMeshOriginalYes, kNGLMeshKeyOriginal,
 							  kNGLMeshCentralizeYes, kNGLMeshKeyCentralize,
 							  @"0.3", kNGLMeshKeyNormalize,
 							  nil];
 
 	//_DModel = [[NGLMesh alloc]      initWithFile:@"cube.obj" settings:settings delegate:nil];
-    _DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
-    
+    _DModel = [[NGLMesh alloc]      initWithFile:@"Pistol.obj" settings:settings delegate:nil];
+    //_DModel = [[NGLMesh alloc]      initWithFile:@"Metro city.obj" settings:settings delegate:nil];
+    //_DModel = [[NGLMesh alloc]      initWithFile:@"IronArmour.obj" settings:settings delegate:nil];
+    //_DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
+
     _camera = [[NGLCamera alloc]    initWithMeshes:_DModel, nil];
 	[_camera autoAdjustAspectRatio:YES animated:YES];
 
     _DModel.rotationSpace = NGLRotationSpaceWorld;
     //_DModel.rotationOrder = NGLRotationOrderZYX;
 
-    NGLLight *defaultLight = [NGLLight defaultLight];
-    defaultLight.attenuation = 5.0f;
-    defaultLight.color = nglColorFromUIColor([UIColor orangeColor]);
-    
+    //NGLLight *defaultLight = [NGLLight defaultLight];
+    //defaultLight.attenuation = 5.0f;
+    //defaultLight.color = nglColorFromUIColor([UIColor orangeColor]);
+
 	// Starts the debug monitor.
 	[[NGLDebug debugMonitor] startWithView:(NGLView *)self.view];
 }

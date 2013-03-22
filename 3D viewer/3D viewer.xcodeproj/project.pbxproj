@@ -36,6 +36,53 @@
 		887BA3E516FB30CA003885EE /* cube_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3DD16FB30CA003885EE /* cube_right.jpg */; };
 		887BA3E616FB30CA003885EE /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3DE16FB30CA003885EE /* cube_top.jpg */; };
 		887BA3EB16FC5734003885EE /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887BA3EA16FC5734003885EE /* NinevehGL.framework */; };
+		887BA3FC16FC65E5003885EE /* IronArmour.obj in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3ED16FC65E5003885EE /* IronArmour.obj */; };
+		887BA3FD16FC65E5003885EE /* bootsplate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3EF16FC65E5003885EE /* bootsplate.JPG */; };
+		887BA3FE16FC65E5003885EE /* bootsplate_n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F016FC65E5003885EE /* bootsplate_n.JPG */; };
+		887BA3FF16FC65E5003885EE /* cuirassplate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F116FC65E5003885EE /* cuirassplate.JPG */; };
+		887BA40016FC65E5003885EE /* cuirassplate_n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F216FC65E5003885EE /* cuirassplate_n.JPG */; };
+		887BA40116FC65E5003885EE /* gauntletsplate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F316FC65E5003885EE /* gauntletsplate.JPG */; };
+		887BA40216FC65E5003885EE /* gauntletsplate_n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F416FC65E5003885EE /* gauntletsplate_n.JPG */; };
+		887BA40316FC65E5003885EE /* hairlong.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F516FC65E5003885EE /* hairlong.bmp */; };
+		887BA40416FC65E5003885EE /* helmetplate.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F616FC65E5003885EE /* helmetplate.JPG */; };
+		887BA40516FC65E5003885EE /* helmetplate01.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F716FC65E5003885EE /* helmetplate01.JPG */; };
+		887BA40616FC65E5003885EE /* helmetplate01_n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F816FC65E5003885EE /* helmetplate01_n.JPG */; };
+		887BA40716FC65E5003885EE /* helmetplate_n.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3F916FC65E5003885EE /* helmetplate_n.JPG */; };
+		887BA40816FC65E5003885EE /* malebody_1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3FA16FC65E5003885EE /* malebody_1.bmp */; };
+		887BA40916FC65E5003885EE /* malehead.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 887BA3FB16FC65E5003885EE /* malehead.JPG */; };
+		887BA41016FC6844003885EE /* Pistol.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 887BA40B16FC6844003885EE /* Pistol.mtl */; };
+		887BA41116FC6844003885EE /* Pistol.obj in Resources */ = {isa = PBXBuildFile; fileRef = 887BA40C16FC6844003885EE /* Pistol.obj */; };
+		887BA41216FC6844003885EE /* pistol_D.tga in Resources */ = {isa = PBXBuildFile; fileRef = 887BA40D16FC6844003885EE /* pistol_D.tga */; };
+		887BA41316FC6844003885EE /* pistol_N.tga in Resources */ = {isa = PBXBuildFile; fileRef = 887BA40E16FC6844003885EE /* pistol_N.tga */; };
+		887BA41416FC6844003885EE /* pistol_S.tga in Resources */ = {isa = PBXBuildFile; fileRef = 887BA40F16FC6844003885EE /* pistol_S.tga */; };
+		887BA43416FC759B003885EE /* mc1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41616FC759B003885EE /* mc1.jpg */; };
+		887BA43516FC759B003885EE /* mc2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41716FC759B003885EE /* mc2.jpg */; };
+		887BA43616FC759B003885EE /* mc3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41816FC759B003885EE /* mc3.jpg */; };
+		887BA43716FC759B003885EE /* mc4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41916FC759B003885EE /* mc4.jpg */; };
+		887BA43816FC759B003885EE /* mc5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41A16FC759B003885EE /* mc5.jpg */; };
+		887BA43916FC759B003885EE /* 003disgudsi1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41D16FC759B003885EE /* 003disgudsi1.jpg */; };
+		887BA43A16FC759B003885EE /* antenna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41E16FC759B003885EE /* antenna.jpg */; };
+		887BA43B16FC759B003885EE /* antenna_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA41F16FC759B003885EE /* antenna_05.jpg */; };
+		887BA43C16FC759B003885EE /* axq2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42016FC759B003885EE /* axq2.jpg */; };
+		887BA43D16FC759B003885EE /* b1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42116FC759B003885EE /* b1.jpg */; };
+		887BA43E16FC759B003885EE /* b2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42216FC759B003885EE /* b2.jpg */; };
+		887BA43F16FC759B003885EE /* dba1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42316FC759B003885EE /* dba1.jpg */; };
+		887BA44016FC759B003885EE /* dm1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42416FC759B003885EE /* dm1.jpg */; };
+		887BA44116FC759B003885EE /* f3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42516FC759B003885EE /* f3.jpg */; };
+		887BA44216FC759B003885EE /* fac_180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42616FC759B003885EE /* fac_180.jpg */; };
+		887BA44316FC759B003885EE /* fac_231.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42716FC759B003885EE /* fac_231.jpg */; };
+		887BA44416FC759B003885EE /* fac_291.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42816FC759B003885EE /* fac_291.jpg */; };
+		887BA44516FC759B003885EE /* fb1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42916FC759B003885EE /* fb1.jpg */; };
+		887BA44616FC759B003885EE /* flatro0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42A16FC759B003885EE /* flatro0.jpg */; };
+		887BA44716FC759B003885EE /* flatro5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42B16FC759B003885EE /* flatro5.jpg */; };
+		887BA44816FC759B003885EE /* opu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42C16FC759B003885EE /* opu.jpg */; };
+		887BA44916FC759B003885EE /* pyram2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42D16FC759B003885EE /* pyram2.jpg */; };
+		887BA44A16FC759B003885EE /* sn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42E16FC759B003885EE /* sn1.jpg */; };
+		887BA44B16FC759B003885EE /* vf1b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA42F16FC759B003885EE /* vf1b.jpg */; };
+		887BA44C16FC759B003885EE /* vf1c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43016FC759B003885EE /* vf1c.jpg */; };
+		887BA44D16FC759B003885EE /* Metro city.obj in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43116FC759B003885EE /* Metro city.obj */; };
+		887BA44E16FC759B003885EE /* Metro_city.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43216FC759B003885EE /* Metro_city.mtl */; };
+		887BA44F16FC759B003885EE /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43316FC759B003885EE /* readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +132,53 @@
 		887BA3DD16FB30CA003885EE /* cube_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_right.jpg; sourceTree = "<group>"; };
 		887BA3DE16FB30CA003885EE /* cube_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_top.jpg; sourceTree = "<group>"; };
 		887BA3EA16FC5734003885EE /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NinevehGL.framework; sourceTree = "<group>"; };
+		887BA3ED16FC65E5003885EE /* IronArmour.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IronArmour.obj; sourceTree = "<group>"; };
+		887BA3EF16FC65E5003885EE /* bootsplate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bootsplate.JPG; sourceTree = "<group>"; };
+		887BA3F016FC65E5003885EE /* bootsplate_n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bootsplate_n.JPG; sourceTree = "<group>"; };
+		887BA3F116FC65E5003885EE /* cuirassplate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cuirassplate.JPG; sourceTree = "<group>"; };
+		887BA3F216FC65E5003885EE /* cuirassplate_n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cuirassplate_n.JPG; sourceTree = "<group>"; };
+		887BA3F316FC65E5003885EE /* gauntletsplate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gauntletsplate.JPG; sourceTree = "<group>"; };
+		887BA3F416FC65E5003885EE /* gauntletsplate_n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gauntletsplate_n.JPG; sourceTree = "<group>"; };
+		887BA3F516FC65E5003885EE /* hairlong.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = hairlong.bmp; sourceTree = "<group>"; };
+		887BA3F616FC65E5003885EE /* helmetplate.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helmetplate.JPG; sourceTree = "<group>"; };
+		887BA3F716FC65E5003885EE /* helmetplate01.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helmetplate01.JPG; sourceTree = "<group>"; };
+		887BA3F816FC65E5003885EE /* helmetplate01_n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helmetplate01_n.JPG; sourceTree = "<group>"; };
+		887BA3F916FC65E5003885EE /* helmetplate_n.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = helmetplate_n.JPG; sourceTree = "<group>"; };
+		887BA3FA16FC65E5003885EE /* malebody_1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = malebody_1.bmp; sourceTree = "<group>"; };
+		887BA3FB16FC65E5003885EE /* malehead.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = malehead.JPG; sourceTree = "<group>"; };
+		887BA40B16FC6844003885EE /* Pistol.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pistol.mtl; sourceTree = "<group>"; };
+		887BA40C16FC6844003885EE /* Pistol.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pistol.obj; sourceTree = "<group>"; };
+		887BA40D16FC6844003885EE /* pistol_D.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = pistol_D.tga; sourceTree = "<group>"; };
+		887BA40E16FC6844003885EE /* pistol_N.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = pistol_N.tga; sourceTree = "<group>"; };
+		887BA40F16FC6844003885EE /* pistol_S.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = pistol_S.tga; sourceTree = "<group>"; };
+		887BA41616FC759B003885EE /* mc1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc1.jpg; sourceTree = "<group>"; };
+		887BA41716FC759B003885EE /* mc2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc2.jpg; sourceTree = "<group>"; };
+		887BA41816FC759B003885EE /* mc3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc3.jpg; sourceTree = "<group>"; };
+		887BA41916FC759B003885EE /* mc4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc4.jpg; sourceTree = "<group>"; };
+		887BA41A16FC759B003885EE /* mc5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mc5.jpg; sourceTree = "<group>"; };
+		887BA41D16FC759B003885EE /* 003disgudsi1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003disgudsi1.jpg; sourceTree = "<group>"; };
+		887BA41E16FC759B003885EE /* antenna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antenna.jpg; sourceTree = "<group>"; };
+		887BA41F16FC759B003885EE /* antenna_05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antenna_05.jpg; sourceTree = "<group>"; };
+		887BA42016FC759B003885EE /* axq2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = axq2.jpg; sourceTree = "<group>"; };
+		887BA42116FC759B003885EE /* b1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b1.jpg; sourceTree = "<group>"; };
+		887BA42216FC759B003885EE /* b2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b2.jpg; sourceTree = "<group>"; };
+		887BA42316FC759B003885EE /* dba1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dba1.jpg; sourceTree = "<group>"; };
+		887BA42416FC759B003885EE /* dm1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dm1.jpg; sourceTree = "<group>"; };
+		887BA42516FC759B003885EE /* f3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f3.jpg; sourceTree = "<group>"; };
+		887BA42616FC759B003885EE /* fac_180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fac_180.jpg; sourceTree = "<group>"; };
+		887BA42716FC759B003885EE /* fac_231.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fac_231.jpg; sourceTree = "<group>"; };
+		887BA42816FC759B003885EE /* fac_291.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fac_291.jpg; sourceTree = "<group>"; };
+		887BA42916FC759B003885EE /* fb1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fb1.jpg; sourceTree = "<group>"; };
+		887BA42A16FC759B003885EE /* flatro0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flatro0.jpg; sourceTree = "<group>"; };
+		887BA42B16FC759B003885EE /* flatro5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flatro5.jpg; sourceTree = "<group>"; };
+		887BA42C16FC759B003885EE /* opu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opu.jpg; sourceTree = "<group>"; };
+		887BA42D16FC759B003885EE /* pyram2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pyram2.jpg; sourceTree = "<group>"; };
+		887BA42E16FC759B003885EE /* sn1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sn1.jpg; sourceTree = "<group>"; };
+		887BA42F16FC759B003885EE /* vf1b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vf1b.jpg; sourceTree = "<group>"; };
+		887BA43016FC759B003885EE /* vf1c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vf1c.jpg; sourceTree = "<group>"; };
+		887BA43116FC759B003885EE /* Metro city.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Metro city.obj"; sourceTree = "<group>"; };
+		887BA43216FC759B003885EE /* Metro_city.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Metro_city.mtl; sourceTree = "<group>"; };
+		887BA43316FC759B003885EE /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +302,9 @@
 		887BA3D016F9FA60003885EE /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				887BA41516FC759B003885EE /* fl4uddivph-MetroCity */,
+				887BA40A16FC6844003885EE /* Pistol */,
+				887BA3EC16FC65E4003885EE /* Skyrim */,
 				887BA3D616FB30CA003885EE /* Cube */,
 				887BA3D116F9FAA3003885EE /* skull.obj */,
 			);
@@ -227,6 +324,98 @@
 				887BA3DE16FB30CA003885EE /* cube_top.jpg */,
 			);
 			path = Cube;
+			sourceTree = "<group>";
+		};
+		887BA3EC16FC65E4003885EE /* Skyrim */ = {
+			isa = PBXGroup;
+			children = (
+				887BA3ED16FC65E5003885EE /* IronArmour.obj */,
+				887BA3EE16FC65E5003885EE /* Tex */,
+			);
+			path = Skyrim;
+			sourceTree = "<group>";
+		};
+		887BA3EE16FC65E5003885EE /* Tex */ = {
+			isa = PBXGroup;
+			children = (
+				887BA3EF16FC65E5003885EE /* bootsplate.JPG */,
+				887BA3F016FC65E5003885EE /* bootsplate_n.JPG */,
+				887BA3F116FC65E5003885EE /* cuirassplate.JPG */,
+				887BA3F216FC65E5003885EE /* cuirassplate_n.JPG */,
+				887BA3F316FC65E5003885EE /* gauntletsplate.JPG */,
+				887BA3F416FC65E5003885EE /* gauntletsplate_n.JPG */,
+				887BA3F516FC65E5003885EE /* hairlong.bmp */,
+				887BA3F616FC65E5003885EE /* helmetplate.JPG */,
+				887BA3F716FC65E5003885EE /* helmetplate01.JPG */,
+				887BA3F816FC65E5003885EE /* helmetplate01_n.JPG */,
+				887BA3F916FC65E5003885EE /* helmetplate_n.JPG */,
+				887BA3FA16FC65E5003885EE /* malebody_1.bmp */,
+				887BA3FB16FC65E5003885EE /* malehead.JPG */,
+			);
+			path = Tex;
+			sourceTree = "<group>";
+		};
+		887BA40A16FC6844003885EE /* Pistol */ = {
+			isa = PBXGroup;
+			children = (
+				887BA40B16FC6844003885EE /* Pistol.mtl */,
+				887BA40C16FC6844003885EE /* Pistol.obj */,
+				887BA40D16FC6844003885EE /* pistol_D.tga */,
+				887BA40E16FC6844003885EE /* pistol_N.tga */,
+				887BA40F16FC6844003885EE /* pistol_S.tga */,
+			);
+			path = Pistol;
+			sourceTree = "<group>";
+		};
+		887BA41516FC759B003885EE /* fl4uddivph-MetroCity */ = {
+			isa = PBXGroup;
+			children = (
+				887BA41616FC759B003885EE /* mc1.jpg */,
+				887BA41716FC759B003885EE /* mc2.jpg */,
+				887BA41816FC759B003885EE /* mc3.jpg */,
+				887BA41916FC759B003885EE /* mc4.jpg */,
+				887BA41A16FC759B003885EE /* mc5.jpg */,
+				887BA41B16FC759B003885EE /* Metro city */,
+				887BA43316FC759B003885EE /* readme.txt */,
+			);
+			path = "fl4uddivph-MetroCity";
+			sourceTree = "<group>";
+		};
+		887BA41B16FC759B003885EE /* Metro city */ = {
+			isa = PBXGroup;
+			children = (
+				887BA41C16FC759B003885EE /* Maps */,
+				887BA43116FC759B003885EE /* Metro city.obj */,
+				887BA43216FC759B003885EE /* Metro_city.mtl */,
+			);
+			path = "Metro city";
+			sourceTree = "<group>";
+		};
+		887BA41C16FC759B003885EE /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				887BA41D16FC759B003885EE /* 003disgudsi1.jpg */,
+				887BA41E16FC759B003885EE /* antenna.jpg */,
+				887BA41F16FC759B003885EE /* antenna_05.jpg */,
+				887BA42016FC759B003885EE /* axq2.jpg */,
+				887BA42116FC759B003885EE /* b1.jpg */,
+				887BA42216FC759B003885EE /* b2.jpg */,
+				887BA42316FC759B003885EE /* dba1.jpg */,
+				887BA42416FC759B003885EE /* dm1.jpg */,
+				887BA42516FC759B003885EE /* f3.jpg */,
+				887BA42616FC759B003885EE /* fac_180.jpg */,
+				887BA42716FC759B003885EE /* fac_231.jpg */,
+				887BA42816FC759B003885EE /* fac_291.jpg */,
+				887BA42916FC759B003885EE /* fb1.jpg */,
+				887BA42A16FC759B003885EE /* flatro0.jpg */,
+				887BA42B16FC759B003885EE /* flatro5.jpg */,
+				887BA42C16FC759B003885EE /* opu.jpg */,
+				887BA42D16FC759B003885EE /* pyram2.jpg */,
+				887BA42E16FC759B003885EE /* sn1.jpg */,
+				887BA42F16FC759B003885EE /* vf1b.jpg */,
+				887BA43016FC759B003885EE /* vf1c.jpg */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +503,53 @@
 				887BA3E416FB30CA003885EE /* cube_left.jpg in Resources */,
 				887BA3E516FB30CA003885EE /* cube_right.jpg in Resources */,
 				887BA3E616FB30CA003885EE /* cube_top.jpg in Resources */,
+				887BA3FC16FC65E5003885EE /* IronArmour.obj in Resources */,
+				887BA3FD16FC65E5003885EE /* bootsplate.JPG in Resources */,
+				887BA3FE16FC65E5003885EE /* bootsplate_n.JPG in Resources */,
+				887BA3FF16FC65E5003885EE /* cuirassplate.JPG in Resources */,
+				887BA40016FC65E5003885EE /* cuirassplate_n.JPG in Resources */,
+				887BA40116FC65E5003885EE /* gauntletsplate.JPG in Resources */,
+				887BA40216FC65E5003885EE /* gauntletsplate_n.JPG in Resources */,
+				887BA40316FC65E5003885EE /* hairlong.bmp in Resources */,
+				887BA40416FC65E5003885EE /* helmetplate.JPG in Resources */,
+				887BA40516FC65E5003885EE /* helmetplate01.JPG in Resources */,
+				887BA40616FC65E5003885EE /* helmetplate01_n.JPG in Resources */,
+				887BA40716FC65E5003885EE /* helmetplate_n.JPG in Resources */,
+				887BA40816FC65E5003885EE /* malebody_1.bmp in Resources */,
+				887BA40916FC65E5003885EE /* malehead.JPG in Resources */,
+				887BA41016FC6844003885EE /* Pistol.mtl in Resources */,
+				887BA41116FC6844003885EE /* Pistol.obj in Resources */,
+				887BA41216FC6844003885EE /* pistol_D.tga in Resources */,
+				887BA41316FC6844003885EE /* pistol_N.tga in Resources */,
+				887BA41416FC6844003885EE /* pistol_S.tga in Resources */,
+				887BA43416FC759B003885EE /* mc1.jpg in Resources */,
+				887BA43516FC759B003885EE /* mc2.jpg in Resources */,
+				887BA43616FC759B003885EE /* mc3.jpg in Resources */,
+				887BA43716FC759B003885EE /* mc4.jpg in Resources */,
+				887BA43816FC759B003885EE /* mc5.jpg in Resources */,
+				887BA43916FC759B003885EE /* 003disgudsi1.jpg in Resources */,
+				887BA43A16FC759B003885EE /* antenna.jpg in Resources */,
+				887BA43B16FC759B003885EE /* antenna_05.jpg in Resources */,
+				887BA43C16FC759B003885EE /* axq2.jpg in Resources */,
+				887BA43D16FC759B003885EE /* b1.jpg in Resources */,
+				887BA43E16FC759B003885EE /* b2.jpg in Resources */,
+				887BA43F16FC759B003885EE /* dba1.jpg in Resources */,
+				887BA44016FC759B003885EE /* dm1.jpg in Resources */,
+				887BA44116FC759B003885EE /* f3.jpg in Resources */,
+				887BA44216FC759B003885EE /* fac_180.jpg in Resources */,
+				887BA44316FC759B003885EE /* fac_231.jpg in Resources */,
+				887BA44416FC759B003885EE /* fac_291.jpg in Resources */,
+				887BA44516FC759B003885EE /* fb1.jpg in Resources */,
+				887BA44616FC759B003885EE /* flatro0.jpg in Resources */,
+				887BA44716FC759B003885EE /* flatro5.jpg in Resources */,
+				887BA44816FC759B003885EE /* opu.jpg in Resources */,
+				887BA44916FC759B003885EE /* pyram2.jpg in Resources */,
+				887BA44A16FC759B003885EE /* sn1.jpg in Resources */,
+				887BA44B16FC759B003885EE /* vf1b.jpg in Resources */,
+				887BA44C16FC759B003885EE /* vf1c.jpg in Resources */,
+				887BA44D16FC759B003885EE /* Metro city.obj in Resources */,
+				887BA44E16FC759B003885EE /* Metro_city.mtl in Resources */,
+				887BA44F16FC759B003885EE /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
