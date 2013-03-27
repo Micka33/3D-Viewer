@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:3D viewer/3D viewer/3D viewer.xcodeproj">
+      location = "group:3D viewer/3D viewer.xcodeproj">
    </FileRef>
 </Workspace>

@@ -2,7 +2,7 @@
  *  _D_viewerAppDelegate.m
  *  3D viewer
  *
- *  Created by beingenious on 22/03/13.
+ *  Created by beingenious on 25/03/13.
  *  Copyright __MyCompanyName__ 2013. All rights reserved.
  */
 
@@ -39,6 +39,7 @@
  * Multisampling and stencil buffers cannot be used together. Setting the viewShouldUseStencilBuffer
  * property to YES will force the viewPixelSamples property to be 1.
  */
+/*
 -(void) establishDirectorController {
 	
 	// Establish the type of CCDirector to use.
@@ -64,6 +65,7 @@
 	// This must be done after the GL view is assigned to the director!
 	[director enableRetinaDisplay: YES];
 }
+*/
 #endif
 
 #if CC3_CC2_2

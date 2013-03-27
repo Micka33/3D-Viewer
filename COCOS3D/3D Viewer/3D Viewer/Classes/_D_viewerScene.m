@@ -2,7 +2,7 @@
  *  _D_viewerScene.m
  *  3D viewer
  *
- *  Created by beingenious on 22/03/13.
+ *  Created by beingenious on 25/03/13.
  *  Copyright __MyCompanyName__ 2013. All rights reserved.
  */
 
@@ -12,7 +12,6 @@
 #import "CC3MeshNode.h"
 #import "CC3Camera.h"
 #import "CC3Light.h"
-
 
 @implementation _D_viewerScene
 
@@ -39,81 +38,95 @@
  *    font to a mesh results in a LOT of triangles. When adapting this template project for your own
  *    application, REMOVE the POD file 'hello-world.pod' from the Resources folder of your project.
  */
+
+-(CC3MeshNode *) getFirstMeshNode
+{
+    GLuint count = 0;
+    CC3Node *node = [self getNodeTagged:count];
+    while ([node isMeshNode] == NO)
+        node = [self getNodeTagged:++count];
+    return (CC3MeshNode *)node;
+}
+
+#define ZOOM 2.0f
 -(void) initializeScene {
 
-	// Create the camera, place it back a bit, and add it to the scene
+	// This is the simplest way to load a POD resource file and add the
+	// nodes to the CC3Scene, if no customized resource subclass is needed.
+	//[self addContentFromPODFile: @"hello-world.pod"];
+	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod"];
+	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod"]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
+	[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod"];
+
+    Dobj = [self getFirstMeshNode];
+    [Dobj moveMeshOriginToCenterOfGeometry];
+
+    //NSLog(@"\n(%@)Dobj.boundingBox.maximum.z=%f\n", [Dobj name], Dobj.boundingBox.maximum.z);
+    CGFloat maxDepth = MAX(MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z, Dobj.boundingBox.maximum.y - Dobj.boundingBox.minimum.y),Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
+    CGFloat camZ = maxDepth*ZOOM;
+/*
+    CGFloat camY =(maxDepth*ZOOM)/2.0f;
+    CGFloat camX = (maxDepth*ZOOM)/2.0f;
+*/
+
+ 	// Create the camera, place it back a bit, and add it to the scene
 	CC3Camera* cam = [CC3Camera nodeWithName: @"Camera"];
-	cam.location = cc3v( 0.0, 0.0, 6.0 );
+	cam.location = cc3v(0.0f, 0.0f, camZ);
 	[self addChild: cam];
 
 	// Create a light, place it back and to the left at a specific
 	// position (not just directional lighting), and add it to the scene
 	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v( -2.0, 0.0, 0.0 );
+	lamp.location = cc3v(-4.0f, 0.0f, 0.0f);
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
 
-	// This is the simplest way to load a POD resource file and add the
-	// nodes to the CC3Scene, if no customized resource subclass is needed.
-	[self add
+    
+    
+
 	// Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex content in main memory because it is now redundant.
 	[self createGLBuffers];
+    [self retainVertexContent];
 	[self releaseRedundantContent];
-	
+
 	// That's it! The scene is now constructed and is good to go.
-	
+
 	// To help you find your scene content once it is loaded, the onOpen method below contains
 	// code to automatically move the camera so that it frames the scene. You can remove that
 	// code once you know where you want to place your camera.
-	
+
 	// If you encounter problems displaying your models, you can uncomment one or more of the
 	// following lines to help you troubleshoot. You can also use these features on a single node,
 	// or a structure of nodes. See the CC3Node notes for more explanation of these properties.
 	// Also, the onOpen method below contains additional troubleshooting code you can comment
 	// out to move the camera so that it will display the entire scene automatically.
-	
+
 	// Displays short descriptive text for each node (including class, node name & tag).
 	// The text is displayed centered on the pivot point (origin) of the node.
-//	self.shouldDrawAllDescriptors = YES;
-	
+	//self.shouldDrawAllDescriptors = YES;
+
 	// Displays bounding boxes around those nodes with local content (eg- meshes).
-//	self.shouldDrawAllLocalContentWireframeBoxes = YES;
-	
+	self.shouldDrawAllLocalContentWireframeBoxes = YES;
+
 	// Displays bounding boxes around all nodes. The bounding box for each node
 	// will encompass its child nodes.
-//	self.shouldDrawAllWireframeBoxes = YES;
-	
+	self.shouldDrawAllWireframeBoxes = YES;
+
 	// If you encounter issues creating and adding nodes, or loading models from
 	// files, the following line is used to log the full structure of the scene.
-	LogInfo(@"The structure of this scene is: %@", [self structureDescription]);
-	
-	// ------------------------------------------
+	//LogInfo(@"The structure of this scene is: %@", [self structureDescription]);
 
-	// And to add some dynamism, we'll animate the 'hello, world' message
-	// using a couple of actions...
-	
-	// Fetch the 'hello, world' object that was loaded from the POD file and start it rotating
-	CC3MeshNode* helloTxt = (CC3MeshNode*)[self getNodeNamed: @"Hello"];
+/*
 	CCActionInterval* partialRot = [CC3RotateBy actionWithDuration: 1.0
 														  rotateBy: cc3v(0.0, 30.0, 0.0)];
-	[helloTxt runAction: [CCRepeatForever actionWithAction: partialRot]];
-	
-	// To make things a bit more appealing, set up a repeating up/down cycle to
-	// change the color of the text from the original red to blue, and back again.
-	GLfloat tintTime = 8.0f;
-	ccColor3B startColor = helloTxt.color;
-	ccColor3B endColor = { 50, 0, 200 };
-	CCActionInterval* tintDown = [CCTintTo actionWithDuration: tintTime
-														  red: endColor.r
-														green: endColor.g
-														 blue: endColor.b];
-	CCActionInterval* tintUp = [CCTintTo actionWithDuration: tintTime
-														red: startColor.r
-													  green: startColor.g
-													   blue: startColor.b];
-	 CCActionInterval* tintCycle = [CCSequence actionOne: tintDown two: tintUp];
-	[helloTxt runAction: [CCRepeatForever actionWithAction: tintCycle]];
+	CCActionInterval* backPartialRot = [CC3RotateBy actionWithDuration: 1.0
+														  rotateBy: cc3v(0.0, -30.0, 0.0)];
+    CCActionInterval* tintCycle = [CCSequence actionOne: partialRot two: backPartialRot];
+	[Dobj runAction: [CCRepeatForever actionWithAction: tintCycle]];
+*/
+    /** Set this parameter to adjust the rate of camera movement during a pinch gesture. */
+    kObjectPinchMovementUnit = maxDepth/2.5;
 }
 
 
@@ -164,10 +177,9 @@
 	// updateAfterTransform: method to track how the camera moves, where it ends up, and
 	// what the camera's clipping distances are, in order to determine how to position
 	// and configure the camera to view your entire scene. Then you can remove this code.
-	[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.5f];
-
+	[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.1f];
 	// Uncomment this line to draw the bounding box of the scene.
-//	self.shouldDrawWireframeBox = YES;
+	//self.shouldDrawWireframeBox = YES;
 }
 
 /**
@@ -206,6 +218,61 @@
  * For more info, read the notes of this method on CC3Scene.
  */
 -(void) nodeSelected: (CC3Node*) aNode byTouchEvent: (uint) touchType at: (CGPoint) touchPoint {}
+
+
+
+#pragma mark Gesture handling
+
+-(void) startMovingObject { objectMoveStartLocation = activeCamera.location; }
+-(void) stopMovingObject {}
+-(void) moveObjectBy:  (CGFloat) aMovement {
+    
+	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
+	GLfloat camMoveDist = logf(aMovement) * kObjectPinchMovementUnit;
+	CC3Vector moveVector = CC3VectorScaleUniform(activeCamera.globalForwardDirection, camMoveDist);
+	activeCamera.location = CC3VectorAdd(objectMoveStartLocation, moveVector);
+    
+}
+
+
+-(void) startRotatingObjectOnZAxis { objectRotationOnZAxisStartLocation = activeCamera.rotation; }
+-(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
+{
+	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement*60);
+    activeCamera.rotation = CC3VectorAdd(objectRotationOnZAxisStartLocation, rotateVector);
+    /*
+    NSLog(@"\n\
+          current:%f, %f, %f\n\
+          adding :%f, %f, %f\n\
+          new    :%f, %f, %f\n\
+          ",
+          objectRotationOnZAxisStartLocation.x, objectRotationOnZAxisStartLocation.y, objectRotationOnZAxisStartLocation.z,
+          rotateVector.x, rotateVector.y, rotateVector.z,
+          Dobj.rotation.x, Dobj.rotation.y, Dobj.rotation.z);
+     */
+}
+-(void) stopRotatingObjectOnZAxis {}
+
+
+-(void) startRotatingObjectOnXYAxis { objectRotationOnXYAxisStartLocation = Dobj.rotation; }
+-(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement
+{
+    [Dobj moveMeshOriginTo:CC3VectorMake(0.0f, 0.0f, objectRotationOnXYAxisStartLocation.z)];
+	CC3Vector rotateVector = CC3VectorMake(aMovement.y, aMovement.x, 0.0f);
+    Dobj.rotation = CC3VectorAdd(objectRotationOnXYAxisStartLocation, rotateVector);
+    /*
+    NSLog(@"\n\
+          current:%f, %f, %f\n\
+          adding :%f, %f, %f\n\
+          new    :%f, %f, %f\n\
+          ",
+          objectRotationOnXYAxisStartLocation.x, objectRotationOnXYAxisStartLocation.y, objectRotationOnXYAxisStartLocation.z,
+          rotateVector.x, rotateVector.y, rotateVector.z,
+          Dobj.rotation.x, Dobj.rotation.y, Dobj.rotation.z);
+    */
+}
+-(void) stopRotatingObjectOnXYAxis {}
+
 
 @end
 

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "886E158E16FCB051005C15FB"
+               BlueprintIdentifier = "88AD9BBB170056A5007A6A3A"
                BuildableName = "3D viewer.app"
                BlueprintName = "3D viewer"
                ReferencedContainer = "container:3D viewer.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "886E158E16FCB051005C15FB"
+            BlueprintIdentifier = "88AD9BBB170056A5007A6A3A"
             BuildableName = "3D viewer.app"
             BlueprintName = "3D viewer"
             ReferencedContainer = "container:3D viewer.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "886E158E16FCB051005C15FB"
+            BlueprintIdentifier = "88AD9BBB170056A5007A6A3A"
             BuildableName = "3D viewer.app"
             BlueprintName = "3D viewer"
             ReferencedContainer = "container:3D viewer.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "886E158E16FCB051005C15FB"
+            BlueprintIdentifier = "88AD9BBB170056A5007A6A3A"
             BuildableName = "3D viewer.app"
             BlueprintName = "3D viewer"
             ReferencedContainer = "container:3D viewer.xcodeproj">
