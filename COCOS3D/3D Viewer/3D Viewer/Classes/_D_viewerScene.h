@@ -13,9 +13,9 @@
 @interface _D_viewerScene : CC3Scene {
     @private
     CC3MeshNode *Dobj;
-    CC3Vector objectRotationOnZAxisStartLocation;
-    CC3Vector objectRotationOnXYAxisStartLocation;
-    CC3Vector objectMoveStartLocation;
+    CC3Vector objectZAxisStartRotation;
+    CC3Vector objectXYAxisStartRotation;
+    CC3Vector objectZAxisStartLocation;
     CGFloat kObjectPinchMovementUnit;
 }
 

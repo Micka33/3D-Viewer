@@ -54,20 +54,19 @@
 	// This is the simplest way to load a POD resource file and add the
 	// nodes to the CC3Scene, if no customized resource subclass is needed.
 	//[self addContentFromPODFile: @"hello-world.pod"];
-	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod"];
+	[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod"];
 	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod"]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
-	[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod"];
+	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod"];
 
     Dobj = [self getFirstMeshNode];
     [Dobj moveMeshOriginToCenterOfGeometry];
 
     //NSLog(@"\n(%@)Dobj.boundingBox.maximum.z=%f\n", [Dobj name], Dobj.boundingBox.maximum.z);
-    CGFloat maxDepth = MAX(MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z, Dobj.boundingBox.maximum.y - Dobj.boundingBox.minimum.y),Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
+    CGFloat maxDepth = MAX(
+                           MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z,
+                               Dobj.boundingBox.maximum.y - Dobj.boundingBox.minimum.y),
+                           Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
     CGFloat camZ = maxDepth*ZOOM;
-/*
-    CGFloat camY =(maxDepth*ZOOM)/2.0f;
-    CGFloat camX = (maxDepth*ZOOM)/2.0f;
-*/
 
  	// Create the camera, place it back a bit, and add it to the scene
 	CC3Camera* cam = [CC3Camera nodeWithName: @"Camera"];
@@ -77,17 +76,14 @@
 	// Create a light, place it back and to the left at a specific
 	// position (not just directional lighting), and add it to the scene
 	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(-4.0f, 0.0f, 0.0f);
+	lamp.location = cc3v(-3.0f, 0.0f, 0.0f);
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
 
-    
-    
 
 	// Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex content in main memory because it is now redundant.
 	[self createGLBuffers];
-    [self retainVertexContent];
 	[self releaseRedundantContent];
 
 	// That's it! The scene is now constructed and is good to go.
@@ -104,7 +100,6 @@
 
 	// Displays short descriptive text for each node (including class, node name & tag).
 	// The text is displayed centered on the pivot point (origin) of the node.
-	//self.shouldDrawAllDescriptors = YES;
 
 	// Displays bounding boxes around those nodes with local content (eg- meshes).
 	self.shouldDrawAllLocalContentWireframeBoxes = YES;
@@ -223,53 +218,33 @@
 
 #pragma mark Gesture handling
 
--(void) startMovingObject { objectMoveStartLocation = activeCamera.location; }
+-(void) startMovingObject { objectZAxisStartLocation = Dobj.location; }
 -(void) stopMovingObject {}
--(void) moveObjectBy:  (CGFloat) aMovement {
-    
+-(void) moveObjectBy:  (CGFloat) aMovement
+{
 	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
-	GLfloat camMoveDist = logf(aMovement) * kObjectPinchMovementUnit;
+	GLfloat camMoveDist = logf(aMovement) * -kObjectPinchMovementUnit;
 	CC3Vector moveVector = CC3VectorScaleUniform(activeCamera.globalForwardDirection, camMoveDist);
-	activeCamera.location = CC3VectorAdd(objectMoveStartLocation, moveVector);
-    
+	Dobj.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
 }
 
 
--(void) startRotatingObjectOnZAxis { objectRotationOnZAxisStartLocation = activeCamera.rotation; }
+-(void) startRotatingObjectOnZAxis { objectZAxisStartRotation = CC3VectorMake(0.0f, 0.0f, 0.0f); }
 -(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
 {
 	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement*60);
-    activeCamera.rotation = CC3VectorAdd(objectRotationOnZAxisStartLocation, rotateVector);
-    /*
-    NSLog(@"\n\
-          current:%f, %f, %f\n\
-          adding :%f, %f, %f\n\
-          new    :%f, %f, %f\n\
-          ",
-          objectRotationOnZAxisStartLocation.x, objectRotationOnZAxisStartLocation.y, objectRotationOnZAxisStartLocation.z,
-          rotateVector.x, rotateVector.y, rotateVector.z,
-          Dobj.rotation.x, Dobj.rotation.y, Dobj.rotation.z);
-     */
+    [Dobj rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
+    objectZAxisStartRotation = rotateVector;
 }
 -(void) stopRotatingObjectOnZAxis {}
 
 
--(void) startRotatingObjectOnXYAxis { objectRotationOnXYAxisStartLocation = Dobj.rotation; }
+-(void) startRotatingObjectOnXYAxis { objectXYAxisStartRotation =  CC3VectorMake(0.0f, 0.0f, 0.0f); }
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement
 {
-    [Dobj moveMeshOriginTo:CC3VectorMake(0.0f, 0.0f, objectRotationOnXYAxisStartLocation.z)];
 	CC3Vector rotateVector = CC3VectorMake(aMovement.y, aMovement.x, 0.0f);
-    Dobj.rotation = CC3VectorAdd(objectRotationOnXYAxisStartLocation, rotateVector);
-    /*
-    NSLog(@"\n\
-          current:%f, %f, %f\n\
-          adding :%f, %f, %f\n\
-          new    :%f, %f, %f\n\
-          ",
-          objectRotationOnXYAxisStartLocation.x, objectRotationOnXYAxisStartLocation.y, objectRotationOnXYAxisStartLocation.z,
-          rotateVector.x, rotateVector.y, rotateVector.z,
-          Dobj.rotation.x, Dobj.rotation.y, Dobj.rotation.z);
-    */
+    [Dobj rotateBy:CC3VectorDifference(rotateVector, objectXYAxisStartRotation)];
+    objectXYAxisStartRotation = rotateVector;
 }
 -(void) stopRotatingObjectOnXYAxis {}
 
