@@ -13,6 +13,8 @@
 #import "CC3Camera.h"
 #import "CC3Light.h"
 
+#define ObjectName	@"3DObject"
+
 @implementation _D_viewerScene
 
 -(void) dealloc {
@@ -39,29 +41,25 @@
  *    application, REMOVE the POD file 'hello-world.pod' from the Resources folder of your project.
  */
 
--(CC3MeshNode *) getFirstMeshNode
-{
-    GLuint count = 0;
-    CC3Node *node = [self getNodeTagged:count];
-    while ([node isMeshNode] == NO)
-        node = [self getNodeTagged:++count];
-    return (CC3MeshNode *)node;
-}
-
 #define ZOOM 2.0f
--(void) initializeScene {
-
+-(void) initializeScene
+{
+    //Dobj = [CC3Node alloc];
 	// This is the simplest way to load a POD resource file and add the
 	// nodes to the CC3Scene, if no customized resource subclass is needed.
-	//[self addContentFromPODFile: @"hello-world.pod"];
-	[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod"];
-	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod"]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
-	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod"];
+	//[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod" withName:ObjectName]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
+	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"DragonScale_Soldier.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"Atlantis_7.pod" withName:ObjectName];
+	[self addContentFromPODFile: @"4.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"skull.pod" withName:ObjectName];
 
-    Dobj = [self getFirstMeshNode];
-    [Dobj moveMeshOriginToCenterOfGeometry];
+    Dobj = (CC3MeshNode*)[self getNodeNamed:ObjectName];
+    NSLog(@"type[%@]", Dobj.class);
+    //[Dobj moveMeshOriginToCenterOfGeometry];
 
-    //NSLog(@"\n(%@)Dobj.boundingBox.maximum.z=%f\n", [Dobj name], Dobj.boundingBox.maximum.z);
     CGFloat maxDepth = MAX(
                            MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z,
                                Dobj.boundingBox.maximum.y - Dobj.boundingBox.minimum.y),
@@ -79,8 +77,26 @@
 	lamp.location = cc3v(-3.0f, 0.0f, 0.0f);
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
+	lamp = [CC3Light nodeWithName: @"Lamp"];
+	lamp.location = cc3v(3.0f, 0.0f, 0.0f);
+	lamp.isDirectionalOnly = NO;
+	[cam addChild: lamp];
+	lamp = [CC3Light nodeWithName: @"Lamp"];
+	lamp.location = cc3v(0.0f, -3.0f, 0.0f);
+	lamp.isDirectionalOnly = NO;
+	[cam addChild: lamp];
+	lamp = [CC3Light nodeWithName: @"Lamp"];
+	lamp.location = cc3v(0.0f, 3.0f, 0.0f);
+	lamp.isDirectionalOnly = NO;
+	lamp = [CC3Light nodeWithName: @"Lamp"];
+	lamp.location = cc3v(0.0f, 0.0f, 0.0f);
+	lamp.isDirectionalOnly = NO;
+	[cam addChild: lamp];
 
-
+	//self.ambientLight = kCCC4FBlackTransparent;
+    //NSLog(@"isIlluminated=%d", self.isIlluminated);
+    
+    [self addChild: Dobj];
 	// Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex content in main memory because it is now redundant.
 	[self createGLBuffers];
@@ -173,6 +189,7 @@
 	// what the camera's clipping distances are, in order to determine how to position
 	// and configure the camera to view your entire scene. Then you can remove this code.
 	[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.1f];
+
 	// Uncomment this line to draw the bounding box of the scene.
 	//self.shouldDrawWireframeBox = YES;
 }

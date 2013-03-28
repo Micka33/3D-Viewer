@@ -145,6 +145,7 @@
 	
 	// Attach the layer to the controller and run a scene with it.
 	[_viewController runSceneOnNode: mainLayer];
+    
 }
 
 /** Pause the cocos3d/cocos2d action. */

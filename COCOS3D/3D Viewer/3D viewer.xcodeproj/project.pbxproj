@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		888847261704497300E65066 /* Dragonscale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8888470E1704497300E65066 /* Dragonscale.jpg */; };
+		888847271704497300E65066 /* DragonScale_Soldier.DAE in Resources */ = {isa = PBXBuildFile; fileRef = 8888470F1704497300E65066 /* DragonScale_Soldier.DAE */; };
+		888847281704497300E65066 /* DragonScale_Soldier.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888847101704497300E65066 /* DragonScale_Soldier.pod */; };
+		888847291704497300E65066 /* Armor.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847121704497300E65066 /* Armor.dds */; };
+		8888472A1704497300E65066 /* Armor_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847131704497300E65066 /* Armor_m.dds */; };
+		8888472B1704497300E65066 /* Armor_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847141704497300E65066 /* Armor_n.dds */; };
+		8888472C1704497300E65066 /* Boots.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847151704497300E65066 /* Boots.dds */; };
+		8888472D1704497300E65066 /* Boots_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847161704497300E65066 /* Boots_m.dds */; };
+		8888472E1704497300E65066 /* Boots_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847171704497300E65066 /* Boots_n.dds */; };
+		8888472F1704497300E65066 /* EyeBrown.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847181704497300E65066 /* EyeBrown.dds */; };
+		888847301704497300E65066 /* EyeBrown_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847191704497300E65066 /* EyeBrown_n.dds */; };
+		888847311704497300E65066 /* EyeBrown_sk.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471A1704497300E65066 /* EyeBrown_sk.dds */; };
+		888847321704497300E65066 /* EyeCubeMap.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471B1704497300E65066 /* EyeCubeMap.dds */; };
+		888847331704497300E65066 /* Gloves.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471C1704497300E65066 /* Gloves.dds */; };
+		888847341704497300E65066 /* Gloves_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471D1704497300E65066 /* Gloves_m.dds */; };
+		888847351704497300E65066 /* Gloves_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471E1704497300E65066 /* Gloves_n.dds */; };
+		888847361704497300E65066 /* Helmet.dds in Resources */ = {isa = PBXBuildFile; fileRef = 8888471F1704497300E65066 /* Helmet.dds */; };
+		888847371704497300E65066 /* Helmet_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847201704497300E65066 /* Helmet_m.dds */; };
+		888847381704497300E65066 /* Helmet_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847211704497300E65066 /* Helmet_n.dds */; };
+		888847391704497300E65066 /* MaleHead.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847221704497300E65066 /* MaleHead.dds */; };
+		8888473A1704497300E65066 /* MaleHead_msn.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847231704497300E65066 /* MaleHead_msn.dds */; };
+		8888473B1704497300E65066 /* ShinyBright_e.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888847241704497300E65066 /* ShinyBright_e.dds */; };
+		8888473C1704497300E65066 /* mvvl9sie4i-DragonScaleSoldier.rar in Resources */ = {isa = PBXBuildFile; fileRef = 888847251704497300E65066 /* mvvl9sie4i-DragonScaleSoldier.rar */; };
+		888847461704598F00E65066 /* texture0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8888473F1704598F00E65066 /* texture0.jpg */; };
+		888847471704598F00E65066 /* texture1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888847401704598F00E65066 /* texture1.jpg */; };
+		888847481704598F00E65066 /* texture2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888847411704598F00E65066 /* texture2.jpg */; };
+		888847491704598F00E65066 /* Atlantis_7.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888847431704598F00E65066 /* Atlantis_7.dae */; };
+		8888474A1704598F00E65066 /* Atlantis_7.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888847441704598F00E65066 /* Atlantis_7.pod */; };
+		8888474B1704598F00E65066 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 888847451704598F00E65066 /* readme.txt */; };
+		88884AD017047FA800E65066 /* 1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88884AC717047FA800E65066 /* 1.dae */; };
+		88884AD117047FA800E65066 /* 1.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88884AC817047FA800E65066 /* 1.pod */; };
+		88884AD217047FA800E65066 /* 2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88884AC917047FA800E65066 /* 2.dae */; };
+		88884AD317047FA800E65066 /* 2.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACA17047FA800E65066 /* 2.pod */; };
+		88884AD417047FA800E65066 /* 3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACB17047FA800E65066 /* 3.dae */; };
+		88884AD517047FA800E65066 /* 3.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACC17047FA800E65066 /* 3.pod */; };
+		88884AD617047FA800E65066 /* 4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACD17047FA800E65066 /* 4.dae */; };
+		88884AD717047FA800E65066 /* 4.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACE17047FA800E65066 /* 4.pod */; };
+		88884AD817047FA800E65066 /* DAEObjects.rar in Resources */ = {isa = PBXBuildFile; fileRef = 88884ACF17047FA800E65066 /* DAEObjects.rar */; };
+		88884ADD1704A6A300E65066 /* skull.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88884ADB1704A6A300E65066 /* skull.dae */; };
+		88884ADE1704A6A300E65066 /* skull.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88884ADC1704A6A300E65066 /* skull.pod */; };
 		88AD9BC0170056A5007A6A3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AD9BBF170056A5007A6A3A /* QuartzCore.framework */; };
 		88AD9BC2170056A5007A6A3A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AD9BC1170056A5007A6A3A /* OpenGLES.framework */; };
 		88AD9BC4170056A5007A6A3A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AD9BC3170056A5007A6A3A /* OpenAL.framework */; };
@@ -329,6 +369,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8888470E1704497300E65066 /* Dragonscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dragonscale.jpg; sourceTree = "<group>"; };
+		8888470F1704497300E65066 /* DragonScale_Soldier.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DragonScale_Soldier.DAE; sourceTree = "<group>"; };
+		888847101704497300E65066 /* DragonScale_Soldier.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = DragonScale_Soldier.pod; sourceTree = "<group>"; };
+		888847121704497300E65066 /* Armor.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor.dds; sourceTree = "<group>"; };
+		888847131704497300E65066 /* Armor_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor_m.dds; sourceTree = "<group>"; };
+		888847141704497300E65066 /* Armor_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor_n.dds; sourceTree = "<group>"; };
+		888847151704497300E65066 /* Boots.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots.dds; sourceTree = "<group>"; };
+		888847161704497300E65066 /* Boots_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots_m.dds; sourceTree = "<group>"; };
+		888847171704497300E65066 /* Boots_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots_n.dds; sourceTree = "<group>"; };
+		888847181704497300E65066 /* EyeBrown.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown.dds; sourceTree = "<group>"; };
+		888847191704497300E65066 /* EyeBrown_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown_n.dds; sourceTree = "<group>"; };
+		8888471A1704497300E65066 /* EyeBrown_sk.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown_sk.dds; sourceTree = "<group>"; };
+		8888471B1704497300E65066 /* EyeCubeMap.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeCubeMap.dds; sourceTree = "<group>"; };
+		8888471C1704497300E65066 /* Gloves.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves.dds; sourceTree = "<group>"; };
+		8888471D1704497300E65066 /* Gloves_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves_m.dds; sourceTree = "<group>"; };
+		8888471E1704497300E65066 /* Gloves_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves_n.dds; sourceTree = "<group>"; };
+		8888471F1704497300E65066 /* Helmet.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet.dds; sourceTree = "<group>"; };
+		888847201704497300E65066 /* Helmet_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet_m.dds; sourceTree = "<group>"; };
+		888847211704497300E65066 /* Helmet_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet_n.dds; sourceTree = "<group>"; };
+		888847221704497300E65066 /* MaleHead.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaleHead.dds; sourceTree = "<group>"; };
+		888847231704497300E65066 /* MaleHead_msn.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaleHead_msn.dds; sourceTree = "<group>"; };
+		888847241704497300E65066 /* ShinyBright_e.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShinyBright_e.dds; sourceTree = "<group>"; };
+		888847251704497300E65066 /* mvvl9sie4i-DragonScaleSoldier.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mvvl9sie4i-DragonScaleSoldier.rar"; sourceTree = "<group>"; };
+		8888473F1704598F00E65066 /* texture0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture0.jpg; sourceTree = "<group>"; };
+		888847401704598F00E65066 /* texture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture1.jpg; sourceTree = "<group>"; };
+		888847411704598F00E65066 /* texture2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture2.jpg; sourceTree = "<group>"; };
+		888847431704598F00E65066 /* Atlantis_7.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Atlantis_7.dae; sourceTree = "<group>"; };
+		888847441704598F00E65066 /* Atlantis_7.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Atlantis_7.pod; sourceTree = "<group>"; };
+		888847451704598F00E65066 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		88884AC717047FA800E65066 /* 1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 1.dae; sourceTree = "<group>"; };
+		88884AC817047FA800E65066 /* 1.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.pod; sourceTree = "<group>"; };
+		88884AC917047FA800E65066 /* 2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 2.dae; sourceTree = "<group>"; };
+		88884ACA17047FA800E65066 /* 2.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.pod; sourceTree = "<group>"; };
+		88884ACB17047FA800E65066 /* 3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 3.dae; sourceTree = "<group>"; };
+		88884ACC17047FA800E65066 /* 3.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.pod; sourceTree = "<group>"; };
+		88884ACD17047FA800E65066 /* 4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 4.dae; sourceTree = "<group>"; };
+		88884ACE17047FA800E65066 /* 4.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.pod; sourceTree = "<group>"; };
+		88884ACF17047FA800E65066 /* DAEObjects.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = DAEObjects.rar; sourceTree = "<group>"; };
+		88884ADB1704A6A300E65066 /* skull.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = skull.dae; sourceTree = "<group>"; };
+		88884ADC1704A6A300E65066 /* skull.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull.pod; sourceTree = "<group>"; };
 		88AD9BBC170056A5007A6A3A /* 3D viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AD9BBF170056A5007A6A3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		88AD9BC1170056A5007A6A3A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -957,6 +1037,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8888470D1704497300E65066 /* dragonscale */ = {
+			isa = PBXGroup;
+			children = (
+				8888470E1704497300E65066 /* Dragonscale.jpg */,
+				8888470F1704497300E65066 /* DragonScale_Soldier.DAE */,
+				888847101704497300E65066 /* DragonScale_Soldier.pod */,
+				888847111704497300E65066 /* images */,
+				888847251704497300E65066 /* mvvl9sie4i-DragonScaleSoldier.rar */,
+			);
+			name = dragonscale;
+			path = Resources/dragonscale;
+			sourceTree = "<group>";
+		};
+		888847111704497300E65066 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				888847121704497300E65066 /* Armor.dds */,
+				888847131704497300E65066 /* Armor_m.dds */,
+				888847141704497300E65066 /* Armor_n.dds */,
+				888847151704497300E65066 /* Boots.dds */,
+				888847161704497300E65066 /* Boots_m.dds */,
+				888847171704497300E65066 /* Boots_n.dds */,
+				888847181704497300E65066 /* EyeBrown.dds */,
+				888847191704497300E65066 /* EyeBrown_n.dds */,
+				8888471A1704497300E65066 /* EyeBrown_sk.dds */,
+				8888471B1704497300E65066 /* EyeCubeMap.dds */,
+				8888471C1704497300E65066 /* Gloves.dds */,
+				8888471D1704497300E65066 /* Gloves_m.dds */,
+				8888471E1704497300E65066 /* Gloves_n.dds */,
+				8888471F1704497300E65066 /* Helmet.dds */,
+				888847201704497300E65066 /* Helmet_m.dds */,
+				888847211704497300E65066 /* Helmet_n.dds */,
+				888847221704497300E65066 /* MaleHead.dds */,
+				888847231704497300E65066 /* MaleHead_msn.dds */,
+				888847241704497300E65066 /* ShinyBright_e.dds */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		8888473D1704598F00E65066 /* Atlantis 7 */ = {
+			isa = PBXGroup;
+			children = (
+				8888473E1704598F00E65066 /* images */,
+				888847421704598F00E65066 /* models */,
+				888847451704598F00E65066 /* readme.txt */,
+			);
+			name = "Atlantis 7";
+			path = "Resources/Atlantis 7.dae";
+			sourceTree = "<group>";
+		};
+		8888473E1704598F00E65066 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8888473F1704598F00E65066 /* texture0.jpg */,
+				888847401704598F00E65066 /* texture1.jpg */,
+				888847411704598F00E65066 /* texture2.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		888847421704598F00E65066 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				888847431704598F00E65066 /* Atlantis_7.dae */,
+				888847441704598F00E65066 /* Atlantis_7.pod */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		88884AC617047FA800E65066 /* daeobjects */ = {
+			isa = PBXGroup;
+			children = (
+				88884AC717047FA800E65066 /* 1.dae */,
+				88884AC817047FA800E65066 /* 1.pod */,
+				88884AC917047FA800E65066 /* 2.dae */,
+				88884ACA17047FA800E65066 /* 2.pod */,
+				88884ACB17047FA800E65066 /* 3.dae */,
+				88884ACC17047FA800E65066 /* 3.pod */,
+				88884ACD17047FA800E65066 /* 4.dae */,
+				88884ACE17047FA800E65066 /* 4.pod */,
+				88884ADB1704A6A300E65066 /* skull.dae */,
+				88884ADC1704A6A300E65066 /* skull.pod */,
+				88884ACF17047FA800E65066 /* DAEObjects.rar */,
+			);
+			name = daeobjects;
+			path = Resources/daeobjects;
+			sourceTree = "<group>";
+		};
 		88AD9BB3170056A5007A6A3A = {
 			isa = PBXGroup;
 			children = (
@@ -1006,6 +1174,9 @@
 		88AD9BD2170056A5007A6A3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88884AC617047FA800E65066 /* daeobjects */,
+				8888473D1704598F00E65066 /* Atlantis 7 */,
+				8888470D1704497300E65066 /* dragonscale */,
 				88AD9FAD1701BCF1007A6A3A /* oilDrum */,
 				88AD9F851701B1A7007A6A3A /* Cobblestones5 */,
 				88AD9F6A17009282007A6A3A /* Badblue_fly.dae */,
@@ -2088,6 +2259,46 @@
 				88AD9FC91701BCF1007A6A3A /* oildrum_col.jpg in Resources */,
 				88AD9FCA1701BCF1007A6A3A /* oildrum_nor.jpg in Resources */,
 				88AD9FCB1701BCF1007A6A3A /* soqc2y955x-oildrum.7z in Resources */,
+				888847261704497300E65066 /* Dragonscale.jpg in Resources */,
+				888847271704497300E65066 /* DragonScale_Soldier.DAE in Resources */,
+				888847281704497300E65066 /* DragonScale_Soldier.pod in Resources */,
+				888847291704497300E65066 /* Armor.dds in Resources */,
+				8888472A1704497300E65066 /* Armor_m.dds in Resources */,
+				8888472B1704497300E65066 /* Armor_n.dds in Resources */,
+				8888472C1704497300E65066 /* Boots.dds in Resources */,
+				8888472D1704497300E65066 /* Boots_m.dds in Resources */,
+				8888472E1704497300E65066 /* Boots_n.dds in Resources */,
+				8888472F1704497300E65066 /* EyeBrown.dds in Resources */,
+				888847301704497300E65066 /* EyeBrown_n.dds in Resources */,
+				888847311704497300E65066 /* EyeBrown_sk.dds in Resources */,
+				888847321704497300E65066 /* EyeCubeMap.dds in Resources */,
+				888847331704497300E65066 /* Gloves.dds in Resources */,
+				888847341704497300E65066 /* Gloves_m.dds in Resources */,
+				888847351704497300E65066 /* Gloves_n.dds in Resources */,
+				888847361704497300E65066 /* Helmet.dds in Resources */,
+				888847371704497300E65066 /* Helmet_m.dds in Resources */,
+				888847381704497300E65066 /* Helmet_n.dds in Resources */,
+				888847391704497300E65066 /* MaleHead.dds in Resources */,
+				8888473A1704497300E65066 /* MaleHead_msn.dds in Resources */,
+				8888473B1704497300E65066 /* ShinyBright_e.dds in Resources */,
+				8888473C1704497300E65066 /* mvvl9sie4i-DragonScaleSoldier.rar in Resources */,
+				888847461704598F00E65066 /* texture0.jpg in Resources */,
+				888847471704598F00E65066 /* texture1.jpg in Resources */,
+				888847481704598F00E65066 /* texture2.jpg in Resources */,
+				888847491704598F00E65066 /* Atlantis_7.dae in Resources */,
+				8888474A1704598F00E65066 /* Atlantis_7.pod in Resources */,
+				8888474B1704598F00E65066 /* readme.txt in Resources */,
+				88884AD017047FA800E65066 /* 1.dae in Resources */,
+				88884AD117047FA800E65066 /* 1.pod in Resources */,
+				88884AD217047FA800E65066 /* 2.dae in Resources */,
+				88884AD317047FA800E65066 /* 2.pod in Resources */,
+				88884AD417047FA800E65066 /* 3.dae in Resources */,
+				88884AD517047FA800E65066 /* 3.pod in Resources */,
+				88884AD617047FA800E65066 /* 4.dae in Resources */,
+				88884AD717047FA800E65066 /* 4.pod in Resources */,
+				88884AD817047FA800E65066 /* DAEObjects.rar in Resources */,
+				88884ADD1704A6A300E65066 /* skull.dae in Resources */,
+				88884ADE1704A6A300E65066 /* skull.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2465,6 +2676,7 @@
 				88AD9F2C170056AC007A6A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
