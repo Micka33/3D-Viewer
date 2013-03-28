@@ -188,10 +188,10 @@
 							  nil];
 
 	//_DModel = [[NGLMesh alloc]      initWithFile:@"cube.obj" settings:settings delegate:nil];
-    _DModel = [[NGLMesh alloc]      initWithFile:@"Pistol.obj" settings:settings delegate:nil];
+    //_DModel = [[NGLMesh alloc]      initWithFile:@"Pistol.obj" settings:settings delegate:nil];
     //_DModel = [[NGLMesh alloc]      initWithFile:@"Metro city.obj" settings:settings delegate:nil];
     //_DModel = [[NGLMesh alloc]      initWithFile:@"IronArmour.obj" settings:settings delegate:nil];
-    //_DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
+    _DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
 
     _camera = [[NGLCamera alloc]    initWithMeshes:_DModel, nil];
 	[_camera autoAdjustAspectRatio:YES animated:YES];
