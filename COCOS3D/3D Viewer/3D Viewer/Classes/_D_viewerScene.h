@@ -15,6 +15,7 @@
     CC3MeshNode *Dobj;
     CC3Vector objectZAxisStartRotation;
     CC3Vector objectXYAxisStartRotation;
+    CC3Vector objectXYAxisStartMove;
     CC3Vector objectZAxisStartLocation;
     CGFloat kObjectPinchMovementUnit;
 }
@@ -65,6 +66,10 @@
 -(void) startRotatingObjectOnXYAxis;
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement;
 -(void) stopRotatingObjectOnXYAxis;
+
+-(void) startMovingObjectOnXYAxis;
+-(void) moveObjectOnXYAxisBy: (CGPoint) aMovement;
+-(void) stopMovingObjectOnXYAxis;
 
 
 @end

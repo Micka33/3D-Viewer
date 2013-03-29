@@ -63,11 +63,18 @@
     [cameraRotateZ release];
     
     UIPanGestureRecognizer *cameraRotateXY = [[UIPanGestureRecognizer alloc]
-                                             initWithTarget:self action:@selector(handleCameraRotateOnXYAxis:)];
+                                              initWithTarget:self action:@selector(handleCameraRotateOnXYAxis:)];
     [cameraRotateXY setMinimumNumberOfTouches:1];
     [cameraRotateXY setMaximumNumberOfTouches:1];
     [self cc3AddGestureRecognizer: cameraRotateXY];
     [cameraRotateXY release];
+
+    UIPanGestureRecognizer *cameraTranslateXY = [[UIPanGestureRecognizer alloc]
+                                              initWithTarget:self action:@selector(handleCameraTranslateOnXYAxis:)];
+    [cameraTranslateXY setMinimumNumberOfTouches:2];
+    [cameraTranslateXY setMaximumNumberOfTouches:2];
+    [self cc3AddGestureRecognizer: cameraTranslateXY];
+    [cameraTranslateXY release];
 }
 /**
  * Override to perform tear-down activity prior to the scene disappearing.
@@ -90,24 +97,8 @@
 }
 */
 
-/**
- * This handler is invoked when a pinch gesture is recognized.
- *
- * If the pinch starts within a descendant CCNode that wants to capture the touch,
- * such as a menu or button, the gesture is cancelled.
- *
- * The CC3Scene marks the camera location when pinching begins, and is notified
- * as pinching proceeds. It uses the relative scale of the pinch gesture to determine
- * a new location for the camera. Finally, the scene is notified when the pinching
- * gesture finishes.
- *
- * Note that the pinching does not zoom the camera, although the visual effect is
- * very similar. For this application, moving the camera is more flexible and useful
- * than zooming. But other application might prefer to use the pinch gesture scale
- * to modify the uniformScale or fieldOfView properties of the camera, to perform
- * a true zooming effect.
- */
--(void) handleCameraMove: (UIPinchGestureRecognizer*) gesture {
+-(void) handleCameraMove: (UIPinchGestureRecognizer*) gesture
+{
 	switch (gesture.state) {
 		case UIGestureRecognizerStateBegan:
 			if ( [self cc3ValidateGesture: gesture] ) [self.scene startMovingObject];
@@ -123,7 +114,8 @@
 	}
 }
 
--(void) handleCameraRotateOnZAxis: (UIRotationGestureRecognizer*) gesture {
+-(void) handleCameraRotateOnZAxis: (UIRotationGestureRecognizer*) gesture
+{
 	switch (gesture.state) {
 		case UIGestureRecognizerStateBegan:
 			if ( [self cc3ValidateGesture: gesture] ) [self.scene startRotatingObjectOnZAxis];
@@ -139,20 +131,41 @@
 	}
 }
 
--(void) handleCameraRotateOnXYAxis: (UIPanGestureRecognizer*) gesture {
-	switch (gesture.state) {
-		case UIGestureRecognizerStateBegan:
-			if ( [self cc3ValidateGesture: gesture] ) [self.scene startRotatingObjectOnXYAxis];
-			break;
-		case UIGestureRecognizerStateChanged:
-			[self.scene rotateObjectOnXYAxisBy: gesture.translation];
-			break;
-		case UIGestureRecognizerStateEnded:
-			[self.scene stopRotatingObjectOnXYAxis];
-			break;
-		default:
-			break;
-	}
+-(void) handleCameraTranslateOnXYAxis: (UIPanGestureRecognizer*) gesture
+{
+    switch (gesture.state)
+    {
+        case UIGestureRecognizerStateBegan:
+            if ( [self cc3ValidateGesture: gesture] ) [self.scene startMovingObjectOnXYAxis];
+            break;
+        case UIGestureRecognizerStateChanged:
+            [self.scene moveObjectOnXYAxisBy: gesture.translation];
+            break;
+        case UIGestureRecognizerStateEnded:
+            [self.scene stopMovingObjectOnXYAxis];
+            break;
+        default:
+            break;
+    }
+    
+}
+
+-(void) handleCameraRotateOnXYAxis: (UIPanGestureRecognizer*) gesture
+{
+     switch (gesture.state)
+     {
+         case UIGestureRecognizerStateBegan:
+             if ( [self cc3ValidateGesture: gesture] ) [self.scene startRotatingObjectOnXYAxis];
+             break;
+         case UIGestureRecognizerStateChanged:
+             [self.scene rotateObjectOnXYAxisBy: gesture.translation];
+             break;
+         case UIGestureRecognizerStateEnded:
+             [self.scene stopRotatingObjectOnXYAxis];
+             break;
+         default:
+             break;
+     }
 }
 
 @end

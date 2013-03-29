@@ -50,10 +50,10 @@
 	//[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod" withName:ObjectName]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
-	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
+	[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"DragonScale_Soldier.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Atlantis_7.pod" withName:ObjectName];
-	[self addContentFromPODFile: @"4.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"4.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"skull.pod" withName:ObjectName];
 
     Dobj = (CC3MeshNode*)[self getNodeNamed:ObjectName];
@@ -93,7 +93,7 @@
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
 
-	//self.ambientLight = kCCC4FBlackTransparent;
+	self.ambientLight = kCCC4FWhite;
     //NSLog(@"isIlluminated=%d", self.isIlluminated);
     
     [self addChild: Dobj];
@@ -235,35 +235,78 @@
 
 #pragma mark Gesture handling
 
--(void) startMovingObject { objectZAxisStartLocation = Dobj.location; }
--(void) stopMovingObject {}
+/*PINCH GESTURE*/
+-(void) startMovingObject
+{
+    NSLog(@"TRANSLATION Z");
+    objectZAxisStartLocation = Dobj.location;
+}
 -(void) moveObjectBy:  (CGFloat) aMovement
 {
 	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
 	GLfloat camMoveDist = logf(aMovement) * -kObjectPinchMovementUnit;
-	CC3Vector moveVector = CC3VectorScaleUniform(activeCamera.globalForwardDirection, camMoveDist);
+	CC3Vector moveVector = CC3VectorScaleUniform(Dobj.globalForwardDirection, camMoveDist);
 	Dobj.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
 }
+-(void) stopMovingObject
+{
+    NSLog(@"TRANSLATION Z END");
+}
 
-
--(void) startRotatingObjectOnZAxis { objectZAxisStartRotation = CC3VectorMake(0.0f, 0.0f, 0.0f); }
+/*ROTATION GESTURE*/
+-(void) startRotatingObjectOnZAxis
+{
+    NSLog(@"ROTATION Z");
+    objectZAxisStartRotation = CC3VectorMake(0.0f, 0.0f, 0.0f);
+}
 -(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
 {
 	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement*60);
     [Dobj rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
     objectZAxisStartRotation = rotateVector;
 }
--(void) stopRotatingObjectOnZAxis {}
+-(void) stopRotatingObjectOnZAxis
+{
+    NSLog(@"ROTATION Z END");
+}
 
-
--(void) startRotatingObjectOnXYAxis { objectXYAxisStartRotation =  CC3VectorMake(0.0f, 0.0f, 0.0f); }
+/*PAN GESTURE*/
+-(void) startRotatingObjectOnXYAxis
+{
+    NSLog(@"ROTATION XY");
+    objectXYAxisStartRotation =  CC3VectorMake(0.0f, 0.0f, 0.0f);
+}
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement
 {
 	CC3Vector rotateVector = CC3VectorMake(aMovement.y, aMovement.x, 0.0f);
     [Dobj rotateBy:CC3VectorDifference(rotateVector, objectXYAxisStartRotation)];
     objectXYAxisStartRotation = rotateVector;
 }
--(void) stopRotatingObjectOnXYAxis {}
+-(void) stopRotatingObjectOnXYAxis
+{
+    NSLog(@"ROTATION XY END");
+}
+
+-(void) startMovingObjectOnXYAxis
+{
+    NSLog(@"TRANSLATION XY");
+    objectXYAxisStartMove =  CC3VectorMake(0.0f, 0.0f, 0.0f);
+}
+-(void) moveObjectOnXYAxisBy: (CGPoint) aMovement
+{
+    //NSLog(@"ORI X:%f, Y:%f, Z:%f", objectXYAxisStartMove.x, objectXYAxisStartMove.y, objectXYAxisStartMove.z);
+	CC3Vector translateVector = CC3VectorMake(aMovement.x/100,
+                                              -aMovement.y/100,
+                                              0.0f);
+    //CC3Vector by = CC3VectorDifference(translateVector, objectXYAxisStartMove);
+    //NSLog(@"BY X:%f, Y:%f, Z:%f", by.x, by.y, by.z);
+    [Dobj translateBy:CC3VectorDifference(translateVector, objectXYAxisStartMove)];
+    objectXYAxisStartMove = translateVector;
+}
+-(void) stopMovingObjectOnXYAxis
+{
+    NSLog(@"TRANSLATION XY END");
+}
 
 
 @end
