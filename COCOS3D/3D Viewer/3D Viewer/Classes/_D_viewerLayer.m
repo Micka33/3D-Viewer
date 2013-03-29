@@ -161,8 +161,21 @@
              [self.scene rotateObjectOnXYAxisBy: gesture.translation];
              break;
          case UIGestureRecognizerStateEnded:
-             [self.scene stopRotatingObjectOnXYAxis];
+         {
+             CGPoint velocity = gesture.velocity;
+             CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
+             CGFloat slideMult = magnitude / 200;
+             NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
+             
+             float slideFactor = 0.1 * slideMult; // Increase for more of a slide
+             CGPoint finalPoint = CGPointMake(gesture.view.center.x + (velocity.x * slideFactor),
+                                              gesture.view.center.y + (velocity.y * slideFactor));
+             //finalPoint.x = MIN(MAX(finalPoint.x, 0), self.scene.bounds.size.width);
+             //finalPoint.y = MIN(MAX(finalPoint.y, 0), self.scene.bounds.size.height);
+
+             [self.scene stopRotatingObjectOnXYAxisAtPoint:finalPoint withDuration:slideFactor*2];
              break;
+         }
          default:
              break;
      }

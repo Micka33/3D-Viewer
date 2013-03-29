@@ -17,7 +17,9 @@
     CC3Vector objectXYAxisStartRotation;
     CC3Vector objectXYAxisStartMove;
     CC3Vector objectZAxisStartLocation;
-    CGFloat kObjectPinchMovementUnit;
+    CGFloat ZoomRate;
+    CGFloat TranslationXYRate;
+    CGFloat RotationXYRate;
 }
 
 /**
@@ -65,8 +67,8 @@
 
 -(void) startRotatingObjectOnXYAxis;
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement;
--(void) stopRotatingObjectOnXYAxis;
-
+-(void) stopRotatingObjectOnXYAxisAtPoint:(CGPoint)finalPoint
+                             withDuration:(CGFloat)duration;
 -(void) startMovingObjectOnXYAxis;
 -(void) moveObjectOnXYAxisBy: (CGPoint) aMovement;
 -(void) stopMovingObjectOnXYAxis;

@@ -47,10 +47,10 @@
     //Dobj = [CC3Node alloc];
 	// This is the simplest way to load a POD resource file and add the
 	// nodes to the CC3Scene, if no customized resource subclass is needed.
-	//[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
+	[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod" withName:ObjectName]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
-	[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"DragonScale_Soldier.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Atlantis_7.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"4.pod" withName:ObjectName];
@@ -93,7 +93,7 @@
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
 
-	self.ambientLight = kCCC4FWhite;
+	self.ambientLight = kCCC4FDarkGray;
     //NSLog(@"isIlluminated=%d", self.isIlluminated);
     
     [self addChild: Dobj];
@@ -136,8 +136,12 @@
     CCActionInterval* tintCycle = [CCSequence actionOne: partialRot two: backPartialRot];
 	[Dobj runAction: [CCRepeatForever actionWithAction: tintCycle]];
 */
-    /** Set this parameter to adjust the rate of camera movement during a pinch gesture. */
-    kObjectPinchMovementUnit = maxDepth/2.5;
+    /** Set this parameter to adjust the rate of camera movement during a pinch gesture. ZOOM */
+    ZoomRate = maxDepth/2.5;
+    /** Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation */
+    TranslationXYRate = maxDepth/600;
+    /** Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation */
+    RotationXYRate = 1/1.7;
 }
 
 
@@ -244,9 +248,12 @@
 -(void) moveObjectBy:  (CGFloat) aMovement
 {
 	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
-	GLfloat camMoveDist = logf(aMovement) * -kObjectPinchMovementUnit;
+	GLfloat camMoveDist = -logf(aMovement) * ZoomRate;
 	CC3Vector moveVector = CC3VectorScaleUniform(Dobj.globalForwardDirection, camMoveDist);
 	Dobj.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
+    
+    //NSLog(@"SCENE:WIDTH=%f OBJ:WIDTH=%f",
+    //      self.boundingBox.maximum.x - self.boundingBox.minimum.x, Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
 }
 -(void) stopMovingObject
 {
@@ -261,7 +268,7 @@
 }
 -(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
 {
-	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement*60);
+	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement * 60);
     [Dobj rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
     objectZAxisStartRotation = rotateVector;
 }
@@ -278,13 +285,17 @@
 }
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement
 {
-	CC3Vector rotateVector = CC3VectorMake(aMovement.y, aMovement.x, 0.0f);
+	CC3Vector rotateVector = CC3VectorMake(aMovement.y * RotationXYRate,
+                                           aMovement.x * RotationXYRate,
+                                           0.0f);
     [Dobj rotateBy:CC3VectorDifference(rotateVector, objectXYAxisStartRotation)];
     objectXYAxisStartRotation = rotateVector;
 }
--(void) stopRotatingObjectOnXYAxis
+-(void) stopRotatingObjectOnXYAxisAtPoint:(CGPoint)finalPoint
+                             withDuration:(CGFloat)duration
 {
     NSLog(@"ROTATION XY END");
+    //UIViewAnimationOptionCurveEaseOut
 }
 
 -(void) startMovingObjectOnXYAxis
@@ -295,13 +306,13 @@
 -(void) moveObjectOnXYAxisBy: (CGPoint) aMovement
 {
     //NSLog(@"ORI X:%f, Y:%f, Z:%f", objectXYAxisStartMove.x, objectXYAxisStartMove.y, objectXYAxisStartMove.z);
-	CC3Vector translateVector = CC3VectorMake(aMovement.x/100,
-                                              -aMovement.y/100,
+	CC3Vector translateVector = CC3VectorMake(aMovement.x  * TranslationXYRate,
+                                              -aMovement.y * TranslationXYRate,
                                               0.0f);
     //CC3Vector by = CC3VectorDifference(translateVector, objectXYAxisStartMove);
     //NSLog(@"BY X:%f, Y:%f, Z:%f", by.x, by.y, by.z);
     [Dobj translateBy:CC3VectorDifference(translateVector, objectXYAxisStartMove)];
-    objectXYAxisStartMove = translateVector;
+     objectXYAxisStartMove = translateVector;
 }
 -(void) stopMovingObjectOnXYAxis
 {
