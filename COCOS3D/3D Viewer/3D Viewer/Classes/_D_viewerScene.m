@@ -41,24 +41,40 @@
  *    application, REMOVE the POD file 'hello-world.pod' from the Resources folder of your project.
  */
 
+-(CC3MeshNode*) getFirstMesh
+{
+    GLuint count = 1;
+    CC3Node *item;
+    
+    item = [self getNodeTagged: count];
+    while ([item isMeshNode] == NO)
+    {
+        item = [self getNodeTagged: ++count];
+        NSLog(@"name[%@]", item.name);
+    }
+    return (CC3MeshNode*)item;
+}
 #define ZOOM 2.0f
 -(void) initializeScene
 {
     //Dobj = [CC3Node alloc];
 	// This is the simplest way to load a POD resource file and add the
 	// nodes to the CC3Scene, if no customized resource subclass is needed.
-	[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
-	//[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"hello-world.pod" withName:ObjectName];
+	
+    //[self addContentFromPODFile: @"Badblue-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Cobblestones5-anim-noinvert-tryColor.pod" withName:ObjectName]; // [***ERROR***] OpenGL ES permits drawing a maximum of 65536 indexed vertices, and supports only GL_UNSIGNED_SHORT or GL_UNSIGNED_BYTE types for vertex indices
 	//[self addContentFromPODFile: @"oilDrum-anim-noinvert-tryColor.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"DragonScale_Soldier.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"Atlantis_7.pod" withName:ObjectName];
-	//[self addContentFromPODFile: @"4.pod" withName:ObjectName];
+	[self addContentFromPODFile: @"3.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"skull.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"Gladius.pod" withName:ObjectName];
+	//[self addContentFromPODFile: @"cello_and_stand.pod" withName:ObjectName];
 
-    Dobj = (CC3MeshNode*)[self getNodeNamed:ObjectName];
+    Dobj = [self getFirstMesh];
+    //DOBJ = [self getNodeNamed:@"BadBlueBase-node"];
     NSLog(@"type[%@]", Dobj.class);
-    //[Dobj moveMeshOriginToCenterOfGeometry];
 
     CGFloat maxDepth = MAX(
                            MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z,
@@ -66,36 +82,24 @@
                            Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
     CGFloat camZ = maxDepth*ZOOM;
 
+    NSLog(@"maxDepth=%f", maxDepth);
  	// Create the camera, place it back a bit, and add it to the scene
 	CC3Camera* cam = [CC3Camera nodeWithName: @"Camera"];
 	cam.location = cc3v(0.0f, 0.0f, camZ);
 	[self addChild: cam];
 
-	// Create a light, place it back and to the left at a specific
-	// position (not just directional lighting), and add it to the scene
+	 //Create a light, set a direction
 	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(-3.0f, 0.0f, 0.0f);
-	lamp.isDirectionalOnly = NO;
-	[cam addChild: lamp];
-	lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(3.0f, 0.0f, 0.0f);
-	lamp.isDirectionalOnly = NO;
-	[cam addChild: lamp];
-	lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(0.0f, -3.0f, 0.0f);
-	lamp.isDirectionalOnly = NO;
-	[cam addChild: lamp];
-	lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(0.0f, 3.0f, 0.0f);
-	lamp.isDirectionalOnly = NO;
-	lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(0.0f, 0.0f, 0.0f);
-	lamp.isDirectionalOnly = NO;
-	[cam addChild: lamp];
+	lamp.location = cc3v(0.0f, 0.0f, 1.0f);
+	lamp.isDirectionalOnly = YES;
+	[self addChild: lamp];
 
-	self.ambientLight = kCCC4FDarkGray;
+	//self.ambientLight = kCCC4FWhite;
     //NSLog(@"isIlluminated=%d", self.isIlluminated);
-    
+
+    [Dobj addAxesDirectionMarkers];
+    [Dobj moveMeshOriginToCenterOfGeometry];
+
     [self addChild: Dobj];
 	// Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex content in main memory because it is now redundant.
@@ -118,11 +122,11 @@
 	// The text is displayed centered on the pivot point (origin) of the node.
 
 	// Displays bounding boxes around those nodes with local content (eg- meshes).
-	self.shouldDrawAllLocalContentWireframeBoxes = YES;
+	//self.shouldDrawAllLocalContentWireframeBoxes = YES;
 
 	// Displays bounding boxes around all nodes. The bounding box for each node
 	// will encompass its child nodes.
-	self.shouldDrawAllWireframeBoxes = YES;
+	//self.shouldDrawAllWireframeBoxes = YES;
 
 	// If you encounter issues creating and adding nodes, or loading models from
 	// files, the following line is used to log the full structure of the scene.
@@ -140,7 +144,7 @@
     ZoomRate = maxDepth/2.5;
     /** Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation */
     TranslationXYRate = maxDepth/600;
-    /** Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation */
+    /** Set this parameter to adjust the rate of camera movement during a pan gesture. X Y rotation */
     RotationXYRate = 1/1.7;
 }
 
@@ -192,7 +196,7 @@
 	// updateAfterTransform: method to track how the camera moves, where it ends up, and
 	// what the camera's clipping distances are, in order to determine how to position
 	// and configure the camera to view your entire scene. Then you can remove this code.
-	[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.1f];
+	[self.activeCamera moveWithDuration: 1.5 toShowAllOf: self withPadding: 0.1f];
 
 	// Uncomment this line to draw the bounding box of the scene.
 	//self.shouldDrawWireframeBox = YES;
@@ -243,14 +247,14 @@
 -(void) startMovingObject
 {
     NSLog(@"TRANSLATION Z");
-    objectZAxisStartLocation = Dobj.location;
+    objectZAxisStartLocation = self.activeCamera.location;
 }
 -(void) moveObjectBy:  (CGFloat) aMovement
 {
 	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
-	GLfloat camMoveDist = -logf(aMovement) * ZoomRate;
-	CC3Vector moveVector = CC3VectorScaleUniform(Dobj.globalForwardDirection, camMoveDist);
-	Dobj.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
+	GLfloat camMoveDist = logf(aMovement) * ZoomRate;
+	CC3Vector moveVector = CC3VectorScaleUniform(self.activeCamera.globalForwardDirection, camMoveDist);
+	self.activeCamera.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
     
     //NSLog(@"SCENE:WIDTH=%f OBJ:WIDTH=%f",
     //      self.boundingBox.maximum.x - self.boundingBox.minimum.x, Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
@@ -269,7 +273,7 @@
 -(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
 {
 	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement * 60);
-    [Dobj rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
+    [self.activeCamera rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
     objectZAxisStartRotation = rotateVector;
 }
 -(void) stopRotatingObjectOnZAxis

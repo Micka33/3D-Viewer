@@ -366,6 +366,31 @@
 		88AD9FC91701BCF1007A6A3A /* oildrum_col.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88AD9FBA1701BCF1007A6A3A /* oildrum_col.jpg */; };
 		88AD9FCA1701BCF1007A6A3A /* oildrum_nor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88AD9FBB1701BCF1007A6A3A /* oildrum_nor.jpg */; };
 		88AD9FCB1701BCF1007A6A3A /* soqc2y955x-oildrum.7z in Resources */ = {isa = PBXBuildFile; fileRef = 88AD9FBC1701BCF1007A6A3A /* soqc2y955x-oildrum.7z */; };
+		88E0A0AB170AD01A002B0343 /* Gladius.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A098170AD01A002B0343 /* Gladius.dae */; };
+		88E0A0AC170AD01A002B0343 /* Gladius.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A099170AD01A002B0343 /* Gladius.pod */; };
+		88E0A0AD170AD01A002B0343 /* Gladius_Blade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A09A170AD01A002B0343 /* Gladius_Blade.jpg */; };
+		88E0A0AE170AD01A002B0343 /* Hilt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A09B170AD01A002B0343 /* Hilt2.jpg */; };
+		88E0A0AF170AD01A002B0343 /* rINGS_Torus.002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A09C170AD01A002B0343 /* rINGS_Torus.002.jpg */; };
+		88E0A0B0170AD01A002B0343 /* Scabard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A09D170AD01A002B0343 /* Scabard.jpg */; };
+		88E0A0B1170AD01A002B0343 /* Scabardnormals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A09E170AD01A002B0343 /* Scabardnormals.jpg */; };
+		88E0A0B2170AD01A002B0343 /* Gladius_Blade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A0170AD01A002B0343 /* Gladius_Blade.jpg */; };
+		88E0A0B3170AD01A002B0343 /* Gladius_Blade.svg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A1170AD01A002B0343 /* Gladius_Blade.svg */; };
+		88E0A0B4170AD01A002B0343 /* Gladius_BladeNormals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A2170AD01A002B0343 /* Gladius_BladeNormals.jpg */; };
+		88E0A0B5170AD01A002B0343 /* hILT_Hilt.svg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A3170AD01A002B0343 /* hILT_Hilt.svg */; };
+		88E0A0B6170AD01A002B0343 /* hILT_Hilt_Hilt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A4170AD01A002B0343 /* hILT_Hilt_Hilt.jpg */; };
+		88E0A0B7170AD01A002B0343 /* hILT_Normals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A5170AD01A002B0343 /* hILT_Normals.jpg */; };
+		88E0A0B8170AD01A002B0343 /* rINGS_Torus.002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A6170AD01A002B0343 /* rINGS_Torus.002.jpg */; };
+		88E0A0B9170AD01A002B0343 /* rINGS_Torus.002.svg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A7170AD01A002B0343 /* rINGS_Torus.002.svg */; };
+		88E0A0BA170AD01A002B0343 /* Scabard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A8170AD01A002B0343 /* Scabard.jpg */; };
+		88E0A0BB170AD01A002B0343 /* Scabard.svg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0A9170AD01A002B0343 /* Scabard.svg */; };
+		88E0A0BC170AD01A002B0343 /* Scabardnormals.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0AA170AD01A002B0343 /* Scabardnormals.jpg */; };
+		88E0A0C0170ADE7A002B0343 /* cello_and_stand.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0BE170ADE7A002B0343 /* cello_and_stand.dae */; };
+		88E0A0C1170ADE7A002B0343 /* cello_and_stand.obj in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0BF170ADE7A002B0343 /* cello_and_stand.obj */; };
+		88E0A0C5170AE10F002B0343 /* cello_and_stand.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0C4170AE10F002B0343 /* cello_and_stand.pod */; };
+		88E0A0CB170AE243002B0343 /* klcc_lores.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0C7170AE243002B0343 /* klcc_lores.dae */; };
+		88E0A0CC170AE243002B0343 /* klcc_lores.obj in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0C8170AE243002B0343 /* klcc_lores.obj */; };
+		88E0A0CD170AE243002B0343 /* klcc_lores.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0C9170AE243002B0343 /* klcc_lores.pod */; };
+		88E0A0CE170AE243002B0343 /* klccbake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 88E0A0CA170AE243002B0343 /* klccbake.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1015,6 +1040,31 @@
 		88AD9FBA1701BCF1007A6A3A /* oildrum_col.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oildrum_col.jpg; sourceTree = "<group>"; };
 		88AD9FBB1701BCF1007A6A3A /* oildrum_nor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oildrum_nor.jpg; sourceTree = "<group>"; };
 		88AD9FBC1701BCF1007A6A3A /* soqc2y955x-oildrum.7z */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soqc2y955x-oildrum.7z"; sourceTree = "<group>"; };
+		88E0A098170AD01A002B0343 /* Gladius.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Gladius.dae; sourceTree = "<group>"; };
+		88E0A099170AD01A002B0343 /* Gladius.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gladius.pod; sourceTree = "<group>"; };
+		88E0A09A170AD01A002B0343 /* Gladius_Blade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gladius_Blade.jpg; sourceTree = "<group>"; };
+		88E0A09B170AD01A002B0343 /* Hilt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hilt2.jpg; sourceTree = "<group>"; };
+		88E0A09C170AD01A002B0343 /* rINGS_Torus.002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rINGS_Torus.002.jpg; sourceTree = "<group>"; };
+		88E0A09D170AD01A002B0343 /* Scabard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scabard.jpg; sourceTree = "<group>"; };
+		88E0A09E170AD01A002B0343 /* Scabardnormals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scabardnormals.jpg; sourceTree = "<group>"; };
+		88E0A0A0170AD01A002B0343 /* Gladius_Blade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gladius_Blade.jpg; sourceTree = "<group>"; };
+		88E0A0A1170AD01A002B0343 /* Gladius_Blade.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Gladius_Blade.svg; sourceTree = "<group>"; };
+		88E0A0A2170AD01A002B0343 /* Gladius_BladeNormals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gladius_BladeNormals.jpg; sourceTree = "<group>"; };
+		88E0A0A3170AD01A002B0343 /* hILT_Hilt.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hILT_Hilt.svg; sourceTree = "<group>"; };
+		88E0A0A4170AD01A002B0343 /* hILT_Hilt_Hilt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hILT_Hilt_Hilt.jpg; sourceTree = "<group>"; };
+		88E0A0A5170AD01A002B0343 /* hILT_Normals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hILT_Normals.jpg; sourceTree = "<group>"; };
+		88E0A0A6170AD01A002B0343 /* rINGS_Torus.002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rINGS_Torus.002.jpg; sourceTree = "<group>"; };
+		88E0A0A7170AD01A002B0343 /* rINGS_Torus.002.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rINGS_Torus.002.svg; sourceTree = "<group>"; };
+		88E0A0A8170AD01A002B0343 /* Scabard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scabard.jpg; sourceTree = "<group>"; };
+		88E0A0A9170AD01A002B0343 /* Scabard.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scabard.svg; sourceTree = "<group>"; };
+		88E0A0AA170AD01A002B0343 /* Scabardnormals.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Scabardnormals.jpg; sourceTree = "<group>"; };
+		88E0A0BE170ADE7A002B0343 /* cello_and_stand.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cello_and_stand.dae; sourceTree = "<group>"; };
+		88E0A0BF170ADE7A002B0343 /* cello_and_stand.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cello_and_stand.obj; sourceTree = "<group>"; };
+		88E0A0C4170AE10F002B0343 /* cello_and_stand.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = cello_and_stand.pod; sourceTree = "<group>"; };
+		88E0A0C7170AE243002B0343 /* klcc_lores.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = klcc_lores.dae; sourceTree = "<group>"; };
+		88E0A0C8170AE243002B0343 /* klcc_lores.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = klcc_lores.obj; sourceTree = "<group>"; };
+		88E0A0C9170AE243002B0343 /* klcc_lores.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = klcc_lores.pod; sourceTree = "<group>"; };
+		88E0A0CA170AE243002B0343 /* klccbake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = klccbake.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1174,6 +1224,9 @@
 		88AD9BD2170056A5007A6A3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88E0A0C6170AE243002B0343 /* building */,
+				88E0A0BD170ADE7A002B0343 /* music */,
+				88E0A097170AD01A002B0343 /* RomanGladiusCollada */,
 				88884AC617047FA800E65066 /* daeobjects */,
 				8888473D1704598F00E65066 /* Atlantis 7 */,
 				8888470D1704497300E65066 /* dragonscale */,
@@ -2135,6 +2188,63 @@
 			path = Resources/oilDrum;
 			sourceTree = "<group>";
 		};
+		88E0A097170AD01A002B0343 /* RomanGladiusCollada */ = {
+			isa = PBXGroup;
+			children = (
+				88E0A098170AD01A002B0343 /* Gladius.dae */,
+				88E0A099170AD01A002B0343 /* Gladius.pod */,
+				88E0A09A170AD01A002B0343 /* Gladius_Blade.jpg */,
+				88E0A09B170AD01A002B0343 /* Hilt2.jpg */,
+				88E0A09C170AD01A002B0343 /* rINGS_Torus.002.jpg */,
+				88E0A09D170AD01A002B0343 /* Scabard.jpg */,
+				88E0A09E170AD01A002B0343 /* Scabardnormals.jpg */,
+				88E0A09F170AD01A002B0343 /* UV+NormalMaps */,
+			);
+			name = RomanGladiusCollada;
+			path = Resources/RomanGladiusCollada;
+			sourceTree = "<group>";
+		};
+		88E0A09F170AD01A002B0343 /* UV+NormalMaps */ = {
+			isa = PBXGroup;
+			children = (
+				88E0A0A0170AD01A002B0343 /* Gladius_Blade.jpg */,
+				88E0A0A1170AD01A002B0343 /* Gladius_Blade.svg */,
+				88E0A0A2170AD01A002B0343 /* Gladius_BladeNormals.jpg */,
+				88E0A0A3170AD01A002B0343 /* hILT_Hilt.svg */,
+				88E0A0A4170AD01A002B0343 /* hILT_Hilt_Hilt.jpg */,
+				88E0A0A5170AD01A002B0343 /* hILT_Normals.jpg */,
+				88E0A0A6170AD01A002B0343 /* rINGS_Torus.002.jpg */,
+				88E0A0A7170AD01A002B0343 /* rINGS_Torus.002.svg */,
+				88E0A0A8170AD01A002B0343 /* Scabard.jpg */,
+				88E0A0A9170AD01A002B0343 /* Scabard.svg */,
+				88E0A0AA170AD01A002B0343 /* Scabardnormals.jpg */,
+			);
+			path = "UV+NormalMaps";
+			sourceTree = "<group>";
+		};
+		88E0A0BD170ADE7A002B0343 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				88E0A0C4170AE10F002B0343 /* cello_and_stand.pod */,
+				88E0A0BE170ADE7A002B0343 /* cello_and_stand.dae */,
+				88E0A0BF170ADE7A002B0343 /* cello_and_stand.obj */,
+			);
+			name = music;
+			path = Resources/music;
+			sourceTree = "<group>";
+		};
+		88E0A0C6170AE243002B0343 /* building */ = {
+			isa = PBXGroup;
+			children = (
+				88E0A0C7170AE243002B0343 /* klcc_lores.dae */,
+				88E0A0C8170AE243002B0343 /* klcc_lores.obj */,
+				88E0A0C9170AE243002B0343 /* klcc_lores.pod */,
+				88E0A0CA170AE243002B0343 /* klccbake.jpg */,
+			);
+			name = building;
+			path = Resources/building;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2299,6 +2409,31 @@
 				88884AD817047FA800E65066 /* DAEObjects.rar in Resources */,
 				88884ADD1704A6A300E65066 /* skull.dae in Resources */,
 				88884ADE1704A6A300E65066 /* skull.pod in Resources */,
+				88E0A0AB170AD01A002B0343 /* Gladius.dae in Resources */,
+				88E0A0AC170AD01A002B0343 /* Gladius.pod in Resources */,
+				88E0A0AD170AD01A002B0343 /* Gladius_Blade.jpg in Resources */,
+				88E0A0AE170AD01A002B0343 /* Hilt2.jpg in Resources */,
+				88E0A0AF170AD01A002B0343 /* rINGS_Torus.002.jpg in Resources */,
+				88E0A0B0170AD01A002B0343 /* Scabard.jpg in Resources */,
+				88E0A0B1170AD01A002B0343 /* Scabardnormals.jpg in Resources */,
+				88E0A0B2170AD01A002B0343 /* Gladius_Blade.jpg in Resources */,
+				88E0A0B3170AD01A002B0343 /* Gladius_Blade.svg in Resources */,
+				88E0A0B4170AD01A002B0343 /* Gladius_BladeNormals.jpg in Resources */,
+				88E0A0B5170AD01A002B0343 /* hILT_Hilt.svg in Resources */,
+				88E0A0B6170AD01A002B0343 /* hILT_Hilt_Hilt.jpg in Resources */,
+				88E0A0B7170AD01A002B0343 /* hILT_Normals.jpg in Resources */,
+				88E0A0B8170AD01A002B0343 /* rINGS_Torus.002.jpg in Resources */,
+				88E0A0B9170AD01A002B0343 /* rINGS_Torus.002.svg in Resources */,
+				88E0A0BA170AD01A002B0343 /* Scabard.jpg in Resources */,
+				88E0A0BB170AD01A002B0343 /* Scabard.svg in Resources */,
+				88E0A0BC170AD01A002B0343 /* Scabardnormals.jpg in Resources */,
+				88E0A0C0170ADE7A002B0343 /* cello_and_stand.dae in Resources */,
+				88E0A0C1170ADE7A002B0343 /* cello_and_stand.obj in Resources */,
+				88E0A0C5170AE10F002B0343 /* cello_and_stand.pod in Resources */,
+				88E0A0CB170AE243002B0343 /* klcc_lores.dae in Resources */,
+				88E0A0CC170AE243002B0343 /* klcc_lores.obj in Resources */,
+				88E0A0CD170AE243002B0343 /* klcc_lores.pod in Resources */,
+				88E0A0CE170AE243002B0343 /* klccbake.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
