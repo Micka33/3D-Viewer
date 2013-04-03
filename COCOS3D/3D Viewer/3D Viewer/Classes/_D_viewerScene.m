@@ -21,26 +21,6 @@
 	[super dealloc];
 }
 
-/**
- * Constructs the 3D scene.
- *
- * Adds 3D objects to the scene, loading a 3D 'hello, world' message
- * from a POD file, and creating the camera and light programatically.
- *
- * When adapting this template to your application, remove all of the content
- * of this method, and add your own to construct your 3D model scene.
- *
- * NOTES:
- *
- * 1) To help you find your scene content once it is loaded, the onOpen method below contains
- *    code to automatically move the camera so that it frames the scene. You can remove that
- *    code once you know where you want to place your camera.
- *
- * 2) The POD file used for the 'hello, world' message model is fairly large, because converting a
- *    font to a mesh results in a LOT of triangles. When adapting this template project for your own
- *    application, REMOVE the POD file 'hello-world.pod' from the Resources folder of your project.
- */
-
 -(CC3MeshNode*) getFirstMesh
 {
     GLuint count = 1;
@@ -72,54 +52,83 @@
 	//[self addContentFromPODFile: @"Gladius.pod" withName:ObjectName];
 	//[self addContentFromPODFile: @"cello_and_stand.pod" withName:ObjectName];
 
-    Dobj = [self getFirstMesh];
-    //DOBJ = [self getNodeNamed:@"BadBlueBase-node"];
-    NSLog(@"type[%@]", Dobj.class);
-
+    self->Dobj = //[self getFirstMesh];
+    self->Dobj = (CC3PODResourceNode*)[self getNodeNamed:ObjectName];
+    //NSLog(@"type[%@]", Dobj.class);
+    //NSLog(@"maxDepth=%f", maxDepth);
+	self->cam = [[CC3Camera alloc] init];
+	self->light = [[CC3Light alloc] init];
+    self->eye = [[CC3Node alloc] init];
+    self->container = [[CC3MeshNode alloc] init];
+    /**
+     * We get the maximum width/depth/high
+     * on any of the X/Y/Z axis
+     */
     CGFloat maxDepth = MAX(
-                           MAX(Dobj.boundingBox.maximum.z - Dobj.boundingBox.minimum.z,
-                               Dobj.boundingBox.maximum.y - Dobj.boundingBox.minimum.y),
-                           Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
+                           MAX(self->Dobj.boundingBox.maximum.z - self->Dobj.boundingBox.minimum.z,
+                               self->Dobj.boundingBox.maximum.y - self->Dobj.boundingBox.minimum.y),
+                           self->Dobj.boundingBox.maximum.x - self->Dobj.boundingBox.minimum.x);
+    /**
+     * We set the cam position on the Z axis
+     * to be sure we have the complete object
+     * on screen
+     */
     CGFloat camZ = maxDepth*ZOOM;
-
-    NSLog(@"maxDepth=%f", maxDepth);
- 	// Create the camera, place it back a bit, and add it to the scene
-	CC3Camera* cam = [CC3Camera nodeWithName: @"Camera"];
-	cam.location = cc3v(0.0f, 0.0f, camZ);
-	[self addChild: cam];
-
-	 //Create a light, set a direction
-	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v(0.0f, 0.0f, 1.0f);
-	lamp.isDirectionalOnly = YES;
-	[self addChild: lamp];
-
+    /**
+     * Container set to 0x/0y/0z position
+     */
+    self->container.location = cc3v(0.0f, 0.0f, 0.0f);
+    /**
+     * Object set to 0x/0y/0z position into the container
+     */
+    self->Dobj.location = cc3v(0.0f, 0.0f, 0.0f);
+    /**
+     * Eye set to 0x/0y/camZ position
+     * We set the eye to be at camZ away from the object
+     */
+	self->eye.location = cc3v(0.0f, 0.0f, camZ);
+    /**
+     * Cam set to 0x/0y/camZ position
+     */
+	self->cam.location = cc3v(0.0f, 0.0f, 0.0f);
+    /**
+     * Light set to 1x/1y/1z position
+     * The light is directional to act like a "sun"
+     * A directional-only light is not subject to
+     * attenuation over distance
+     */
+	self->light.location = cc3v(1.0f, 1.0f, 1.0f);
+    self->light.isDirectionalOnly = YES;
 	//self.ambientLight = kCCC4FWhite;
-    //NSLog(@"isIlluminated=%d", self.isIlluminated);
+    
+    /**/[self->Dobj addAxesDirectionMarkers];
+    /**/[self->container addAxesDirectionMarkers];
+    
+    /**
+     * We ensure the container origine is in the middle
+     */
+    [self->container moveMeshOriginToCenterOfGeometry];
+    /**
+     * We put the cam and light into the eye
+     * If the eye is moving, the light and cam will do the same
+     */
+	[self->eye addChild: self->cam];
+	[self->eye addChild: self->light];
+    /**
+     * We insert the Dobj into the container
+     * We then, use the container as a blackbox to manipulate the object
+     */
+	[self->container addChild: self->Dobj];
+    /**
+     * We add the eye and the object to the scene
+     */
+	[self addChild: self->eye];
+    [self addChild: self->container];
 
-    [Dobj addAxesDirectionMarkers];
-    [Dobj moveMeshOriginToCenterOfGeometry];
-
-    [self addChild: Dobj];
 	// Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex content in main memory because it is now redundant.
 	[self createGLBuffers];
 	[self releaseRedundantContent];
-
-	// That's it! The scene is now constructed and is good to go.
-
-	// To help you find your scene content once it is loaded, the onOpen method below contains
-	// code to automatically move the camera so that it frames the scene. You can remove that
-	// code once you know where you want to place your camera.
-
-	// If you encounter problems displaying your models, you can uncomment one or more of the
-	// following lines to help you troubleshoot. You can also use these features on a single node,
-	// or a structure of nodes. See the CC3Node notes for more explanation of these properties.
-	// Also, the onOpen method below contains additional troubleshooting code you can comment
-	// out to move the camera so that it will display the entire scene automatically.
-
-	// Displays short descriptive text for each node (including class, node name & tag).
-	// The text is displayed centered on the pivot point (origin) of the node.
 
 	// Displays bounding boxes around those nodes with local content (eg- meshes).
 	//self.shouldDrawAllLocalContentWireframeBoxes = YES;
@@ -128,23 +137,17 @@
 	// will encompass its child nodes.
 	//self.shouldDrawAllWireframeBoxes = YES;
 
-	// If you encounter issues creating and adding nodes, or loading models from
-	// files, the following line is used to log the full structure of the scene.
-	//LogInfo(@"The structure of this scene is: %@", [self structureDescription]);
-
-/*
-	CCActionInterval* partialRot = [CC3RotateBy actionWithDuration: 1.0
-														  rotateBy: cc3v(0.0, 30.0, 0.0)];
-	CCActionInterval* backPartialRot = [CC3RotateBy actionWithDuration: 1.0
-														  rotateBy: cc3v(0.0, -30.0, 0.0)];
-    CCActionInterval* tintCycle = [CCSequence actionOne: partialRot two: backPartialRot];
-	[Dobj runAction: [CCRepeatForever actionWithAction: tintCycle]];
-*/
-    /** Set this parameter to adjust the rate of camera movement during a pinch gesture. ZOOM */
+    /**
+     * Set this parameter to adjust the rate of camera movement during a pinch gesture. ZOOM
+     */
     ZoomRate = maxDepth/2.5;
-    /** Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation */
+    /**
+     * Set this parameter to adjust the rate of camera movement during a double pan gesture. X Y translation
+     */
     TranslationXYRate = maxDepth/600;
-    /** Set this parameter to adjust the rate of camera movement during a pan gesture. X Y rotation */
+    /**
+     * Set this parameter to adjust the rate of camera movement during a pan gesture. X Y rotation 
+     */
     RotationXYRate = 1/1.7;
 }
 
@@ -196,7 +199,7 @@
 	// updateAfterTransform: method to track how the camera moves, where it ends up, and
 	// what the camera's clipping distances are, in order to determine how to position
 	// and configure the camera to view your entire scene. Then you can remove this code.
-	[self.activeCamera moveWithDuration: 1.5 toShowAllOf: self withPadding: 0.1f];
+	//[self.activeCamera moveWithDuration: 1.5 toShowAllOf: self withPadding: 0.1f];
 
 	// Uncomment this line to draw the bounding box of the scene.
 	//self.shouldDrawWireframeBox = YES;
@@ -247,14 +250,14 @@
 -(void) startMovingObject
 {
     NSLog(@"TRANSLATION Z");
-    objectZAxisStartLocation = self.activeCamera.location;
+    self->objectZAxisStartLocation = self->eye.location;
 }
 -(void) moveObjectBy:  (CGFloat) aMovement
 {
 	// Convert to a logarithmic scale, zero is backwards, one is unity, and above one is forward.
-	GLfloat camMoveDist = logf(aMovement) * ZoomRate;
-	CC3Vector moveVector = CC3VectorScaleUniform(self.activeCamera.globalForwardDirection, camMoveDist);
-	self.activeCamera.location = CC3VectorAdd(objectZAxisStartLocation, moveVector);
+	GLfloat camMoveDist = logf(aMovement) * self->ZoomRate;
+	CC3Vector moveVector = CC3VectorScaleUniform(self->eye.globalForwardDirection, camMoveDist);
+	self->eye.location = CC3VectorAdd(self->objectZAxisStartLocation, moveVector);
     
     //NSLog(@"SCENE:WIDTH=%f OBJ:WIDTH=%f",
     //      self.boundingBox.maximum.x - self.boundingBox.minimum.x, Dobj.boundingBox.maximum.x - Dobj.boundingBox.minimum.x);
@@ -268,13 +271,13 @@
 -(void) startRotatingObjectOnZAxis
 {
     NSLog(@"ROTATION Z");
-    objectZAxisStartRotation = CC3VectorMake(0.0f, 0.0f, 0.0f);
+    self->objectZAxisStartRotation = CC3VectorMake(0.0f, 0.0f, 0.0f);
 }
 -(void) rotateObjectOnZAxisBy: (CGFloat) aMovement
 {
 	CC3Vector rotateVector = CC3VectorMake(0.0f, 0.0f, aMovement * 60);
-    [self.activeCamera rotateBy:CC3VectorDifference(objectZAxisStartRotation, rotateVector)];
-    objectZAxisStartRotation = rotateVector;
+    [self->eye rotateBy:CC3VectorDifference(self->objectZAxisStartRotation, rotateVector)];
+    self->objectZAxisStartRotation = rotateVector;
 }
 -(void) stopRotatingObjectOnZAxis
 {
@@ -285,15 +288,15 @@
 -(void) startRotatingObjectOnXYAxis
 {
     NSLog(@"ROTATION XY");
-    objectXYAxisStartRotation =  CC3VectorMake(0.0f, 0.0f, 0.0f);
+    self->objectXYAxisStartRotation =  CC3VectorMake(0.0f, 0.0f, 0.0f);
 }
 -(void) rotateObjectOnXYAxisBy: (CGPoint) aMovement
 {
-	CC3Vector rotateVector = CC3VectorMake(aMovement.y * RotationXYRate,
-                                           aMovement.x * RotationXYRate,
+	CC3Vector rotateVector = CC3VectorMake(aMovement.y * self->RotationXYRate,
+                                           aMovement.x * self->RotationXYRate,
                                            0.0f);
-    [Dobj rotateBy:CC3VectorDifference(rotateVector, objectXYAxisStartRotation)];
-    objectXYAxisStartRotation = rotateVector;
+    [self->container rotateBy:CC3VectorDifference(rotateVector, self->objectXYAxisStartRotation)];
+    self->objectXYAxisStartRotation = rotateVector;
 }
 -(void) stopRotatingObjectOnXYAxisAtPoint:(CGPoint)finalPoint
                              withDuration:(CGFloat)duration
@@ -305,18 +308,18 @@
 -(void) startMovingObjectOnXYAxis
 {
     NSLog(@"TRANSLATION XY");
-    objectXYAxisStartMove =  CC3VectorMake(0.0f, 0.0f, 0.0f);
+    self->objectXYAxisStartMove =  CC3VectorMake(0.0f, 0.0f, 0.0f);
 }
 -(void) moveObjectOnXYAxisBy: (CGPoint) aMovement
 {
     //NSLog(@"ORI X:%f, Y:%f, Z:%f", objectXYAxisStartMove.x, objectXYAxisStartMove.y, objectXYAxisStartMove.z);
-	CC3Vector translateVector = CC3VectorMake(aMovement.x  * TranslationXYRate,
-                                              -aMovement.y * TranslationXYRate,
+	CC3Vector translateVector = CC3VectorMake(aMovement.x  * self->TranslationXYRate,
+                                              -aMovement.y * self->TranslationXYRate,
                                               0.0f);
     //CC3Vector by = CC3VectorDifference(translateVector, objectXYAxisStartMove);
     //NSLog(@"BY X:%f, Y:%f, Z:%f", by.x, by.y, by.z);
-    [Dobj translateBy:CC3VectorDifference(translateVector, objectXYAxisStartMove)];
-     objectXYAxisStartMove = translateVector;
+    [self->container translateBy:CC3VectorDifference(translateVector, self->objectXYAxisStartMove)];
+     self->objectXYAxisStartMove = translateVector;
 }
 -(void) stopMovingObjectOnXYAxis
 {

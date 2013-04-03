@@ -8,18 +8,31 @@
 
 
 #import "CC3Scene.h"
+#import "CC3PODNode.h"
+#import "CC3PODResourceNode.h"
 
 /** A sample application-specific CC3Scene subclass.*/
 @interface _D_viewerScene : CC3Scene {
     @private
-    CC3MeshNode *Dobj;
+    CC3PODResourceNode *Dobj;
+    CC3Camera *cam;
+	CC3Light *light;
+    CC3Node *eye;
+    CC3MeshNode *container;
+    /*
+     ** Rate settings for
+     ** Zoom/Translation/Rotation
+     */
+    CGFloat ZoomRate;
+    CGFloat TranslationXYRate;
+    CGFloat RotationXYRate;
+    /*
+     ** Memory Manipulation (Translation/Rotation)
+     */
     CC3Vector objectZAxisStartRotation;
     CC3Vector objectXYAxisStartRotation;
     CC3Vector objectXYAxisStartMove;
     CC3Vector objectZAxisStartLocation;
-    CGFloat ZoomRate;
-    CGFloat TranslationXYRate;
-    CGFloat RotationXYRate;
 }
 
 /**
