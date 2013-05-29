@@ -12,19 +12,22 @@
 {
 @private
     NGLMesh *_DModel;
-    CGPoint _translation;
+    CGPoint _panRotation;
+    CGPoint _panTranslation;
     CGFloat _rotation;
     CGFloat _tmpLastRotation;
     CGFloat _scale;
     CGFloat _tmpLastScale;
 	NGLCamera *_camera;
     UIPanGestureRecognizer *_panRecognizer;
+    UIPanGestureRecognizer *_panRecognizerDouble;
     UIRotationGestureRecognizer *_rotationRecognizer;
     UIPinchGestureRecognizer *_pinchRecognizer;
 }
 
 @property (nonatomic, strong) NGLMesh *_DModel;
-@property (nonatomic) CGPoint _translation;
+@property (nonatomic) CGPoint _panTranslation;
+@property (nonatomic) CGPoint _panRotation;
 @property (nonatomic) CGFloat _rotation;
 @property (nonatomic) CGFloat _tmpLastRotation;
 @property (nonatomic) CGFloat _scale;
@@ -38,6 +41,7 @@
         shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (void)handleDoublePan:(UIPanGestureRecognizer *)recognizer;
 - (void)handlePinch:(UIPanGestureRecognizer *)recognizer;
 - (void)handleRotation:(UIPanGestureRecognizer *)recognizer;
 /*

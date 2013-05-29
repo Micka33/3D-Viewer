@@ -14,7 +14,7 @@
 
 @implementation DViewController
 
-@synthesize _DModel, _camera, _translation, _panRecognizer, _rotation, _rotationRecognizer, _tmpLastRotation, _pinchRecognizer, _scale, _tmpLastScale;
+@synthesize _DModel, _camera, _panTranslation, _panRotation, _panRecognizer, _rotation, _rotationRecognizer, _tmpLastRotation, _pinchRecognizer, _scale, _tmpLastScale;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,8 +45,10 @@
 
 -(void)doInit
 {
-    _translation.x = 0.0f;
-    _translation.y = 0.0f;
+    _panTranslation.x = 0.0f;
+    _panTranslation.y = 0.0f;
+    _panRotation.x = 0.0f;
+    _panRotation.y = 0.0f;
     _rotation = 0.0f;
     _tmpLastRotation = 0.0f;
     _tmpLastScale = 1.0f;
@@ -56,7 +58,12 @@
     [_panRecognizer setMinimumNumberOfTouches:1];
     [_panRecognizer setMaximumNumberOfTouches:1];
     [_panRecognizer setDelegate:self];
-
+    
+    _panRecognizerDouble = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoublePan:)];
+    [_panRecognizerDouble setMinimumNumberOfTouches:2];
+    [_panRecognizerDouble setMaximumNumberOfTouches:2];
+    [_panRecognizerDouble setDelegate:self];
+    
     _rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotation:)];
     [_rotationRecognizer setDelegate:self];
 
@@ -70,6 +77,7 @@
 	if([recognizer state] == UIGestureRecognizerStateEnded)
     {
 		_tmpLastScale = 1.0f;
+        _scale = 0.0f;
 		return;
 	}
 	_scale = 1.0f - (_tmpLastScale - [recognizer scale]);
@@ -102,22 +110,25 @@
 
 - (void)handlePan:(UIPanGestureRecognizer *)recognizer
 {
-    if([recognizer state] == UIGestureRecognizerStateEnded)
+    //[self.view bringSubviewToFront:[recognizer view]];
+    if ([recognizer state] == UIGestureRecognizerStateEnded)
     {
-		_translation.x = 0.0f;
-		_translation.y = 0.0f;
+		_panRotation.x = 0.0f;
+		_panRotation.y = 0.0f;
 		return;
 	}
-    _translation = [recognizer translationInView:self.view];
-    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
-
-/*
-    if (recognizer.state == UIGestureRecognizerStateEnded)
+    if ([recognizer state] == UIGestureRecognizerStateChanged)
     {
+        _panRotation = [recognizer translationInView:self.view];
+        [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        NSLog(@"state changed");
+    }
+    if (([recognizer state] == UIGestureRecognizerStateEnded) || ([recognizer state] == UIGestureRecognizerStateCancelled) || ([recognizer state] == UIGestureRecognizerStateFailed))
+    {
+        NSLog(@"state ended");
         CGPoint velocity = [recognizer velocityInView:self.view];
         CGFloat magnitude = sqrtf((velocity.x * velocity.x) + (velocity.y * velocity.y));
         CGFloat slideMult = magnitude / 200;
-        NSLog(@"magnitude: %f, slideMult: %f", magnitude, slideMult);
 
         float slideFactor = 0.1 * slideMult; // Increase for more of a slide
         CGPoint finalPoint = CGPointMake(recognizer.view.center.x + (velocity.x * slideFactor),
@@ -125,39 +136,68 @@
         finalPoint.x = MIN(MAX(finalPoint.x, 0), self.view.bounds.size.width);
         finalPoint.y = MIN(MAX(finalPoint.y, 0), self.view.bounds.size.height);
 
+        NSLog(@"velocity=[%f, %f]\n\
+              magnitude=[%f]\n\
+              slideMult=[%f]\n\
+              slideFactor=[%f]\n\
+              finalPoint=[%f, %f]\n",
+              velocity.x, velocity.y,
+              magnitude,
+              slideMult,
+              slideFactor,
+              finalPoint.x, finalPoint.y);
+
         [UIView animateWithDuration:slideFactor*2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             recognizer.view.center = finalPoint;
         } completion:nil];
-    }*/
+    }
+}
+- (void)handleDoublePan:(UIPanGestureRecognizer *)recognizer
+{
+    if ([recognizer state] == UIGestureRecognizerStateEnded)
+    {
+        NSLog(@"double state ended");
+		_panTranslation.x = 0.0f;
+		_panTranslation.y = 0.0f;
+		return;
+	}
+    //if ([recognizer state] == UIGestureRecognizerStateChanged)
+    //{
+        _panTranslation = [recognizer translationInView:self.view];
+        [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
+        NSLog(@"double state changed");
+    //}
 }
 
 - (void)drawView
 {
-    _DModel.z += (_scale*0.2f);
-    [_DModel rotateRelativeToX:_translation.y*0.3f toY:_translation.x*0.3f toZ:(-_rotation)*95.0f];
+    if (_scale != 0.0f)
+        _DModel.z += (_scale*0.2f);
+    if ((_panRotation.y != 0.0f) || (_panRotation.x != 0.0f) || (_rotation != 0.0f))
+        [_DModel rotateRelativeToX:_panRotation.y*0.3f toY:_panRotation.x*0.3f toZ:(-_rotation)*95.0f];
+    //if ((_panTranslation.y != 0.0f) || (_panTranslation.x != 0.0f))
+    //    [_DModel translateRelativeToX:_panTranslation.x*0.001f toY:-_panTranslation.y*0.001f toZ:0.0f];
 
-    static float increment = 0.0f;
-    ++increment;
-    //NGLLight *defaultLight = [NGLLight defaultLight];
-    //defaultLight.x = sinf(increment*0.05f)*5.0f;
-    //defaultLight.y = cosf(increment*0.05f)*5.0f;
-    
-    if (_DModel.x > self.view.frame.size.width)
-        _DModel.x = self.view.frame.size.width;
-    if (_DModel.x < 0.0f)
-        _DModel.x = 0.0f;
-    if (_DModel.y > self.view.frame.size.width)
-        _DModel.y = self.view.frame.size.width;
-    if (_DModel.y < 0.0f)
-        _DModel.y = 0.0f;
+    //if (_DModel.x > self.view.frame.size.width/2)
+    //    _DModel.x = self.view.frame.size.width/2;
+    //if (_DModel.x < -self.view.frame.size.width/2)
+    //    _DModel.x = -self.view.frame.size.width/2;
+    //if (_DModel.y > self.view.frame.size.height)
+    //    _DModel.y = self.view.frame.size.height;
+    //if (_DModel.y < -self.view.frame.size.height/2)
+    //    _DModel.y = -self.view.frame.size.height/2;
     if (_DModel.z > 0.8f)
         _DModel.z = 0.8f;
 
     _scale = 0.0f;
     _rotation = 0.0f;
-    _translation.x = 0.0f;
-    _translation.y = 0.0f;
-
+    //_panTranslation.x = 0.0f;
+    //_panTranslation.y = 0.0f;
+    _panRotation.x = 0.0f;
+    _panRotation.y = 0.0f;
+/*    NSLog(@"self.view.frame.size.width/2=%f\n\
+            _DModel.x=%f", self.view.frame.size.width/2, _DModel.x);
+ */
     [_camera drawCamera];
 }
 
@@ -166,17 +206,18 @@
 	[super viewDidLoad];
     self.view.multipleTouchEnabled = TRUE;
     [self.view addGestureRecognizer:_panRecognizer];
+    //[self.view addGestureRecognizer:_panRecognizerDouble];
 	[self.view addGestureRecognizer:_rotationRecognizer];
 	[self.view addGestureRecognizer:_pinchRecognizer];
-
-    //NGLFog *defaultFog = [NGLFog defaultFog];
-    //defaultFog.type = NGLFogTypeLinear;
-    //defaultFog.start = 10.0f;
-    //defaultFog.end = 15.0f;
     
-    nglGlobalTextureOptimize(NGLTextureOptimizeNone);
-    nglGlobalLightEffects(NGLLightEffectsOFF);
-    //nglGlobalFrontAndCullFace(NGLFrontFaceCCW, NGLCullFaceBack);
+    nglGlobalTextureOptimize(NGLTextureOptimizeAlways);
+    nglGlobalLightEffects(NGLLightEffectsON);
+    //NGLFrontFaceCCW;NGLFrontFaceCW//NGLCullFaceBack;NGLCullFaceFront;NGLCullFaceNone
+    nglGlobalFrontAndCullFace(NGLFrontFaceCCW, NGLCullFaceNone);
+    //NGLAntialiasNone//NGLAntialias4X//NGL_NULL
+    nglGlobalAntialias(NGL_NULL);
+    //NGL_MAX_FPS
+    nglGlobalFPS(NGL_MAX_FPS);
     nglGlobalFlush();
 
     // Setting the loading process parameters. To take advantage of the NGL Binary feature,
@@ -187,21 +228,19 @@
 							  @"0.3", kNGLMeshKeyNormalize,
 							  nil];
 
-	//_DModel = [[NGLMesh alloc]      initWithFile:@"cube.obj" settings:settings delegate:nil];
     //_DModel = [[NGLMesh alloc]      initWithFile:@"Pistol.obj" settings:settings delegate:nil];
     //_DModel = [[NGLMesh alloc]      initWithFile:@"Metro city.obj" settings:settings delegate:nil];
     //_DModel = [[NGLMesh alloc]      initWithFile:@"IronArmour.obj" settings:settings delegate:nil];
-    _DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
+    //_DModel = [[NGLMesh alloc]      initWithFile:@"skull.obj" settings:settings delegate:nil];
+    _DModel = [[NGLMesh alloc]      initWithFile:@"4.dae" settings:settings delegate:nil];
 
     _camera = [[NGLCamera alloc]    initWithMeshes:_DModel, nil];
 	[_camera autoAdjustAspectRatio:YES animated:YES];
 
     _DModel.rotationSpace = NGLRotationSpaceWorld;
-    //_DModel.rotationOrder = NGLRotationOrderZYX;
 
-    //NGLLight *defaultLight = [NGLLight defaultLight];
-    //defaultLight.attenuation = 5.0f;
-    //defaultLight.color = nglColorFromUIColor([UIColor orangeColor]);
+    NGLLight *defaultLight = [NGLLight defaultLight];
+    defaultLight.attenuation = 5.0f;
 
 	// Starts the debug monitor.
 	[[NGLDebug debugMonitor] startWithView:(NGLView *)self.view];

@@ -199,7 +199,7 @@
 	// updateAfterTransform: method to track how the camera moves, where it ends up, and
 	// what the camera's clipping distances are, in order to determine how to position
 	// and configure the camera to view your entire scene. Then you can remove this code.
-	//[self.activeCamera moveWithDuration: 1.5 toShowAllOf: self withPadding: 0.1f];
+	[self.activeCamera moveWithDuration: 1.5 toShowAllOf: self withPadding: 0.1f];
 
 	// Uncomment this line to draw the bounding box of the scene.
 	//self.shouldDrawWireframeBox = YES;

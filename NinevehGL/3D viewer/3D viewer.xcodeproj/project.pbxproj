@@ -83,6 +83,29 @@
 		887BA44D16FC759B003885EE /* Metro city.obj in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43116FC759B003885EE /* Metro city.obj */; };
 		887BA44E16FC759B003885EE /* Metro_city.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43216FC759B003885EE /* Metro_city.mtl */; };
 		887BA44F16FC759B003885EE /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 887BA43316FC759B003885EE /* readme.txt */; };
+		88B4023C170EB8C900909455 /* Badblue-anim-noinvert-tryColor.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B4022E170EB8C900909455 /* Badblue-anim-noinvert-tryColor.pod */; };
+		88B4023D170EB8C900909455 /* Badblue-anim-noinvert.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B4022F170EB8C900909455 /* Badblue-anim-noinvert.pod */; };
+		88B4023E170EB8C900909455 /* Badblue-anim.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B40230170EB8C900909455 /* Badblue-anim.pod */; };
+		88B4023F170EB8C900909455 /* Badblue.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B40231170EB8C900909455 /* Badblue.pod */; };
+		88B40240170EB8C900909455 /* BadBlueDiffuse.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B40232170EB8C900909455 /* BadBlueDiffuse.tga */; };
+		88B40241170EB8C900909455 /* BadBlueNormal.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B40233170EB8C900909455 /* BadBlueNormal.tga */; };
+		88B40242170EB8C900909455 /* BadBlueSpecular.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B40234170EB8C900909455 /* BadBlueSpecular.tga */; };
+		88B40243170EB8C900909455 /* Badblue_fly.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B40236170EB8C900909455 /* Badblue_fly.dae */; };
+		88B40244170EB8C900909455 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88B40237170EB8C900909455 /* readme.txt */; };
+		88B40245170EB8C900909455 /* BadBlueDiffuse.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B40239170EB8C900909455 /* BadBlueDiffuse.tga */; };
+		88B40246170EB8C900909455 /* BadBlueNormal.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B4023A170EB8C900909455 /* BadBlueNormal.tga */; };
+		88B40247170EB8C900909455 /* BadBlueSpecular.tga in Resources */ = {isa = PBXBuildFile; fileRef = 88B4023B170EB8C900909455 /* BadBlueSpecular.tga */; };
+		88B40254170EBA4E00909455 /* 1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B40249170EBA4E00909455 /* 1.dae */; };
+		88B40255170EBA4E00909455 /* 1.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024A170EBA4E00909455 /* 1.pod */; };
+		88B40256170EBA4E00909455 /* 2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024B170EBA4E00909455 /* 2.dae */; };
+		88B40257170EBA4E00909455 /* 2.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024C170EBA4E00909455 /* 2.pod */; };
+		88B40258170EBA4E00909455 /* 3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024D170EBA4E00909455 /* 3.dae */; };
+		88B40259170EBA4E00909455 /* 3.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024E170EBA4E00909455 /* 3.pod */; };
+		88B4025A170EBA4E00909455 /* 4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B4024F170EBA4E00909455 /* 4.dae */; };
+		88B4025B170EBA4E00909455 /* 4.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B40250170EBA4E00909455 /* 4.pod */; };
+		88B4025C170EBA4E00909455 /* DAEObjects.rar in Resources */ = {isa = PBXBuildFile; fileRef = 88B40251170EBA4E00909455 /* DAEObjects.rar */; };
+		88B4025D170EBA4E00909455 /* skull.dae in Resources */ = {isa = PBXBuildFile; fileRef = 88B40252170EBA4E00909455 /* skull.dae */; };
+		88B4025E170EBA4E00909455 /* skull.pod in Resources */ = {isa = PBXBuildFile; fileRef = 88B40253170EBA4E00909455 /* skull.pod */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +202,29 @@
 		887BA43116FC759B003885EE /* Metro city.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Metro city.obj"; sourceTree = "<group>"; };
 		887BA43216FC759B003885EE /* Metro_city.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Metro_city.mtl; sourceTree = "<group>"; };
 		887BA43316FC759B003885EE /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		88B4022E170EB8C900909455 /* Badblue-anim-noinvert-tryColor.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim-noinvert-tryColor.pod"; sourceTree = "<group>"; };
+		88B4022F170EB8C900909455 /* Badblue-anim-noinvert.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim-noinvert.pod"; sourceTree = "<group>"; };
+		88B40230170EB8C900909455 /* Badblue-anim.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim.pod"; sourceTree = "<group>"; };
+		88B40231170EB8C900909455 /* Badblue.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Badblue.pod; sourceTree = "<group>"; };
+		88B40232170EB8C900909455 /* BadBlueDiffuse.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueDiffuse.tga; sourceTree = "<group>"; };
+		88B40233170EB8C900909455 /* BadBlueNormal.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueNormal.tga; sourceTree = "<group>"; };
+		88B40234170EB8C900909455 /* BadBlueSpecular.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueSpecular.tga; sourceTree = "<group>"; };
+		88B40236170EB8C900909455 /* Badblue_fly.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Badblue_fly.dae; sourceTree = "<group>"; };
+		88B40237170EB8C900909455 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		88B40239170EB8C900909455 /* BadBlueDiffuse.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueDiffuse.tga; sourceTree = "<group>"; };
+		88B4023A170EB8C900909455 /* BadBlueNormal.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueNormal.tga; sourceTree = "<group>"; };
+		88B4023B170EB8C900909455 /* BadBlueSpecular.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueSpecular.tga; sourceTree = "<group>"; };
+		88B40249170EBA4E00909455 /* 1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 1.dae; sourceTree = "<group>"; };
+		88B4024A170EBA4E00909455 /* 1.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.pod; sourceTree = "<group>"; };
+		88B4024B170EBA4E00909455 /* 2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 2.dae; sourceTree = "<group>"; };
+		88B4024C170EBA4E00909455 /* 2.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.pod; sourceTree = "<group>"; };
+		88B4024D170EBA4E00909455 /* 3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 3.dae; sourceTree = "<group>"; };
+		88B4024E170EBA4E00909455 /* 3.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.pod; sourceTree = "<group>"; };
+		88B4024F170EBA4E00909455 /* 4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 4.dae; sourceTree = "<group>"; };
+		88B40250170EBA4E00909455 /* 4.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.pod; sourceTree = "<group>"; };
+		88B40251170EBA4E00909455 /* DAEObjects.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = DAEObjects.rar; sourceTree = "<group>"; };
+		88B40252170EBA4E00909455 /* skull.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = skull.dae; sourceTree = "<group>"; };
+		88B40253170EBA4E00909455 /* skull.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull.pod; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +348,8 @@
 		887BA3D016F9FA60003885EE /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				88B40248170EBA4E00909455 /* daeobjects */,
+				88B4022D170EB8C900909455 /* Badblue_fly.dae */,
 				887BA41516FC759B003885EE /* fl4uddivph-MetroCity */,
 				887BA40A16FC6844003885EE /* Pistol */,
 				887BA3EC16FC65E4003885EE /* Skyrim */,
@@ -416,6 +464,59 @@
 				887BA43016FC759B003885EE /* vf1c.jpg */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		88B4022D170EB8C900909455 /* Badblue_fly.dae */ = {
+			isa = PBXGroup;
+			children = (
+				88B4022E170EB8C900909455 /* Badblue-anim-noinvert-tryColor.pod */,
+				88B4022F170EB8C900909455 /* Badblue-anim-noinvert.pod */,
+				88B40230170EB8C900909455 /* Badblue-anim.pod */,
+				88B40231170EB8C900909455 /* Badblue.pod */,
+				88B40232170EB8C900909455 /* BadBlueDiffuse.tga */,
+				88B40233170EB8C900909455 /* BadBlueNormal.tga */,
+				88B40234170EB8C900909455 /* BadBlueSpecular.tga */,
+				88B40235170EB8C900909455 /* models */,
+				88B40237170EB8C900909455 /* readme.txt */,
+				88B40238170EB8C900909455 /* Textures */,
+			);
+			path = Badblue_fly.dae;
+			sourceTree = "<group>";
+		};
+		88B40235170EB8C900909455 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				88B40236170EB8C900909455 /* Badblue_fly.dae */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		88B40238170EB8C900909455 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				88B40239170EB8C900909455 /* BadBlueDiffuse.tga */,
+				88B4023A170EB8C900909455 /* BadBlueNormal.tga */,
+				88B4023B170EB8C900909455 /* BadBlueSpecular.tga */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		88B40248170EBA4E00909455 /* daeobjects */ = {
+			isa = PBXGroup;
+			children = (
+				88B40249170EBA4E00909455 /* 1.dae */,
+				88B4024A170EBA4E00909455 /* 1.pod */,
+				88B4024B170EBA4E00909455 /* 2.dae */,
+				88B4024C170EBA4E00909455 /* 2.pod */,
+				88B4024D170EBA4E00909455 /* 3.dae */,
+				88B4024E170EBA4E00909455 /* 3.pod */,
+				88B4024F170EBA4E00909455 /* 4.dae */,
+				88B40250170EBA4E00909455 /* 4.pod */,
+				88B40251170EBA4E00909455 /* DAEObjects.rar */,
+				88B40252170EBA4E00909455 /* skull.dae */,
+				88B40253170EBA4E00909455 /* skull.pod */,
+			);
+			path = daeobjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +651,29 @@
 				887BA44D16FC759B003885EE /* Metro city.obj in Resources */,
 				887BA44E16FC759B003885EE /* Metro_city.mtl in Resources */,
 				887BA44F16FC759B003885EE /* readme.txt in Resources */,
+				88B4023C170EB8C900909455 /* Badblue-anim-noinvert-tryColor.pod in Resources */,
+				88B4023D170EB8C900909455 /* Badblue-anim-noinvert.pod in Resources */,
+				88B4023E170EB8C900909455 /* Badblue-anim.pod in Resources */,
+				88B4023F170EB8C900909455 /* Badblue.pod in Resources */,
+				88B40240170EB8C900909455 /* BadBlueDiffuse.tga in Resources */,
+				88B40241170EB8C900909455 /* BadBlueNormal.tga in Resources */,
+				88B40242170EB8C900909455 /* BadBlueSpecular.tga in Resources */,
+				88B40243170EB8C900909455 /* Badblue_fly.dae in Resources */,
+				88B40244170EB8C900909455 /* readme.txt in Resources */,
+				88B40245170EB8C900909455 /* BadBlueDiffuse.tga in Resources */,
+				88B40246170EB8C900909455 /* BadBlueNormal.tga in Resources */,
+				88B40247170EB8C900909455 /* BadBlueSpecular.tga in Resources */,
+				88B40254170EBA4E00909455 /* 1.dae in Resources */,
+				88B40255170EBA4E00909455 /* 1.pod in Resources */,
+				88B40256170EBA4E00909455 /* 2.dae in Resources */,
+				88B40257170EBA4E00909455 /* 2.pod in Resources */,
+				88B40258170EBA4E00909455 /* 3.dae in Resources */,
+				88B40259170EBA4E00909455 /* 3.pod in Resources */,
+				88B4025A170EBA4E00909455 /* 4.dae in Resources */,
+				88B4025B170EBA4E00909455 /* 4.pod in Resources */,
+				88B4025C170EBA4E00909455 /* DAEObjects.rar in Resources */,
+				88B4025D170EBA4E00909455 /* skull.dae in Resources */,
+				88B4025E170EBA4E00909455 /* skull.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +898,7 @@
 				887BA3BF16F9EAB9003885EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		887BA3C016F9EAB9003885EE /* Build configuration list for PBXNativeTarget "3D viewerTests" */ = {
 			isa = XCConfigurationList;
@@ -782,6 +907,7 @@
 				887BA3C216F9EAB9003885EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

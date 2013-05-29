@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8819616417267E3400AD2AF8 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819616317267E3400AD2AF8 /* Pin.m */; };
+		881961671726811C00AD2AF8 /* pin_descriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 881961661726811C00AD2AF8 /* pin_descriptor.m */; };
 		888847261704497300E65066 /* Dragonscale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8888470E1704497300E65066 /* Dragonscale.jpg */; };
 		888847271704497300E65066 /* DragonScale_Soldier.DAE in Resources */ = {isa = PBXBuildFile; fileRef = 8888470F1704497300E65066 /* DragonScale_Soldier.DAE */; };
 		888847281704497300E65066 /* DragonScale_Soldier.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888847101704497300E65066 /* DragonScale_Soldier.pod */; };
@@ -394,6 +396,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8819616217267E3400AD2AF8 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pin.h; path = Classes/Pin.h; sourceTree = "<group>"; };
+		8819616317267E3400AD2AF8 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pin.m; path = Classes/Pin.m; sourceTree = "<group>"; };
+		881961651726811C00AD2AF8 /* pin_descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pin_descriptor.h; path = Classes/pin_descriptor.h; sourceTree = "<group>"; };
+		881961661726811C00AD2AF8 /* pin_descriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pin_descriptor.m; path = Classes/pin_descriptor.m; sourceTree = "<group>"; };
 		8888470E1704497300E65066 /* Dragonscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dragonscale.jpg; sourceTree = "<group>"; };
 		8888470F1704497300E65066 /* DragonScale_Soldier.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DragonScale_Soldier.DAE; sourceTree = "<group>"; };
 		888847101704497300E65066 /* DragonScale_Soldier.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = DragonScale_Soldier.pod; sourceTree = "<group>"; };
@@ -2075,6 +2081,10 @@
 				88AD9F21170056AC007A6A3A /* _D_viewerLayer.m */,
 				88AD9F23170056AC007A6A3A /* _D_viewerScene.h */,
 				88AD9F24170056AC007A6A3A /* _D_viewerScene.m */,
+				8819616217267E3400AD2AF8 /* Pin.h */,
+				8819616317267E3400AD2AF8 /* Pin.m */,
+				881961651726811C00AD2AF8 /* pin_descriptor.h */,
+				881961661726811C00AD2AF8 /* pin_descriptor.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2680,6 +2690,8 @@
 				88AD9F1F170056AC007A6A3A /* _D_viewerAppDelegate.m in Sources */,
 				88AD9F22170056AC007A6A3A /* _D_viewerLayer.m in Sources */,
 				88AD9F25170056AC007A6A3A /* _D_viewerScene.m in Sources */,
+				8819616417267E3400AD2AF8 /* Pin.m in Sources */,
+				881961671726811C00AD2AF8 /* pin_descriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
