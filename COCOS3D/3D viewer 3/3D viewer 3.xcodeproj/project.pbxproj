@@ -267,6 +267,71 @@
 		888DB0C3174D05AE009C5A97 /* _D_viewer_3Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 888DB0C2174D05AE009C5A97 /* _D_viewer_3Layer.m */; };
 		888DB0C6174D05AE009C5A97 /* _D_viewer_3Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 888DB0C5174D05AE009C5A97 /* _D_viewer_3Scene.m */; };
 		888DB0C8174D05AE009C5A97 /* hello-world.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0C7174D05AE009C5A97 /* hello-world.pod */; };
+		888DB0D2174D0643009C5A97 /* pin_descriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 888DB0CF174D0643009C5A97 /* pin_descriptor.m */; };
+		888DB0D3174D0643009C5A97 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 888DB0D1174D0643009C5A97 /* Pin.m */; };
+		888DB11B174D18AA009C5A97 /* skull2.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D4174D18AA009C5A97 /* skull2.pod */; };
+		888DB11C174D18AA009C5A97 /* skull1.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D5174D18AA009C5A97 /* skull1.pod */; };
+		888DB11D174D18AA009C5A97 /* Badblue-anim-noinvert-tryColor.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D6174D18AA009C5A97 /* Badblue-anim-noinvert-tryColor.pod */; };
+		888DB11E174D18AA009C5A97 /* Badblue-anim-noinvert.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D7174D18AA009C5A97 /* Badblue-anim-noinvert.pod */; };
+		888DB11F174D18AA009C5A97 /* Badblue-anim.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D8174D18AA009C5A97 /* Badblue-anim.pod */; };
+		888DB120174D18AA009C5A97 /* Badblue.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0D9174D18AA009C5A97 /* Badblue.pod */; };
+		888DB121174D18AA009C5A97 /* BadBlueDiffuse.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0DA174D18AA009C5A97 /* BadBlueDiffuse.tga */; };
+		888DB122174D18AA009C5A97 /* BadBlueNormal.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0DB174D18AA009C5A97 /* BadBlueNormal.tga */; };
+		888DB123174D18AA009C5A97 /* BadBlueSpecular.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0DC174D18AA009C5A97 /* BadBlueSpecular.tga */; };
+		888DB124174D18AA009C5A97 /* Badblue_fly.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0DD174D18AA009C5A97 /* Badblue_fly.dae */; };
+		888DB125174D18AA009C5A97 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0DF174D18AA009C5A97 /* readme.txt */; };
+		888DB126174D18AA009C5A97 /* BadBlueDiffuse.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E0174D18AA009C5A97 /* BadBlueDiffuse.tga */; };
+		888DB127174D18AA009C5A97 /* BadBlueNormal.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E1174D18AA009C5A97 /* BadBlueNormal.tga */; };
+		888DB128174D18AA009C5A97 /* BadBlueSpecular.tga in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E2174D18AA009C5A97 /* BadBlueSpecular.tga */; };
+		888DB129174D18AA009C5A97 /* 1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E5174D18AA009C5A97 /* 1.dae */; };
+		888DB12A174D18AA009C5A97 /* 1.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E6174D18AA009C5A97 /* 1.pod */; };
+		888DB12B174D18AA009C5A97 /* 2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E7174D18AA009C5A97 /* 2.dae */; };
+		888DB12C174D18AA009C5A97 /* 2.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E8174D18AA009C5A97 /* 2.pod */; };
+		888DB12D174D18AA009C5A97 /* 3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0E9174D18AA009C5A97 /* 3.dae */; };
+		888DB12E174D18AA009C5A97 /* 3.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0EA174D18AA009C5A97 /* 3.pod */; };
+		888DB12F174D18AA009C5A97 /* 4.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0EB174D18AA009C5A97 /* 4.dae */; };
+		888DB130174D18AA009C5A97 /* 4.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0EC174D18AA009C5A97 /* 4.pod */; };
+		888DB131174D18AA009C5A97 /* DAEObjects.rar in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0ED174D18AA009C5A97 /* DAEObjects.rar */; };
+		888DB132174D18AA009C5A97 /* skull.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0EE174D18AA009C5A97 /* skull.dae */; };
+		888DB133174D18AA009C5A97 /* skull.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0EF174D18AA009C5A97 /* skull.pod */; };
+		888DB134174D18AA009C5A97 /* Dragonscale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F1174D18AA009C5A97 /* Dragonscale.jpg */; };
+		888DB135174D18AA009C5A97 /* DragonScale_Soldier.DAE in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F2174D18AA009C5A97 /* DragonScale_Soldier.DAE */; };
+		888DB136174D18AA009C5A97 /* DragonScale_Soldier.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F3174D18AA009C5A97 /* DragonScale_Soldier.pod */; };
+		888DB137174D18AA009C5A97 /* Armor.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F4174D18AA009C5A97 /* Armor.dds */; };
+		888DB138174D18AA009C5A97 /* Armor_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F5174D18AA009C5A97 /* Armor_m.dds */; };
+		888DB139174D18AA009C5A97 /* Armor_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F6174D18AA009C5A97 /* Armor_n.dds */; };
+		888DB13A174D18AA009C5A97 /* Boots.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F7174D18AA009C5A97 /* Boots.dds */; };
+		888DB13B174D18AA009C5A97 /* Boots_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F8174D18AA009C5A97 /* Boots_m.dds */; };
+		888DB13C174D18AA009C5A97 /* Boots_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0F9174D18AA009C5A97 /* Boots_n.dds */; };
+		888DB13D174D18AA009C5A97 /* EyeBrown.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FA174D18AA009C5A97 /* EyeBrown.dds */; };
+		888DB13E174D18AA009C5A97 /* EyeBrown_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FB174D18AA009C5A97 /* EyeBrown_n.dds */; };
+		888DB13F174D18AA009C5A97 /* EyeBrown_sk.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FC174D18AA009C5A97 /* EyeBrown_sk.dds */; };
+		888DB140174D18AA009C5A97 /* EyeCubeMap.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FD174D18AA009C5A97 /* EyeCubeMap.dds */; };
+		888DB141174D18AA009C5A97 /* Gloves.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FE174D18AA009C5A97 /* Gloves.dds */; };
+		888DB142174D18AA009C5A97 /* Gloves_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB0FF174D18AA009C5A97 /* Gloves_m.dds */; };
+		888DB143174D18AA009C5A97 /* Gloves_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB100174D18AA009C5A97 /* Gloves_n.dds */; };
+		888DB144174D18AA009C5A97 /* Helmet.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB101174D18AA009C5A97 /* Helmet.dds */; };
+		888DB145174D18AA009C5A97 /* Helmet_m.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB102174D18AA009C5A97 /* Helmet_m.dds */; };
+		888DB146174D18AA009C5A97 /* Helmet_n.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB103174D18AA009C5A97 /* Helmet_n.dds */; };
+		888DB147174D18AA009C5A97 /* MaleHead.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB104174D18AA009C5A97 /* MaleHead.dds */; };
+		888DB148174D18AA009C5A97 /* MaleHead_msn.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB105174D18AA009C5A97 /* MaleHead_msn.dds */; };
+		888DB149174D18AA009C5A97 /* ShinyBright_e.dds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB106174D18AA009C5A97 /* ShinyBright_e.dds */; };
+		888DB14A174D18AA009C5A97 /* mvvl9sie4i-DragonScaleSoldier.rar in Resources */ = {isa = PBXBuildFile; fileRef = 888DB108174D18AA009C5A97 /* mvvl9sie4i-DragonScaleSoldier.rar */; };
+		888DB14B174D18AA009C5A97 /* aperçu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10A174D18AA009C5A97 /* aperçu1.png */; };
+		888DB14C174D18AA009C5A97 /* aperçu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10B174D18AA009C5A97 /* aperçu2.png */; };
+		888DB14D174D18AA009C5A97 /* oilDrum-anim-noinvert-tryColor.pod in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10C174D18AA009C5A97 /* oilDrum-anim-noinvert-tryColor.pod */; };
+		888DB14E174D18AA009C5A97 /* oildrum.3ds in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10D174D18AA009C5A97 /* oildrum.3ds */; };
+		888DB14F174D18AA009C5A97 /* Oildrum.blend in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10E174D18AA009C5A97 /* Oildrum.blend */; };
+		888DB150174D18AA009C5A97 /* oildrum.dae in Resources */ = {isa = PBXBuildFile; fileRef = 888DB10F174D18AA009C5A97 /* oildrum.dae */; };
+		888DB151174D18AA009C5A97 /* oildrum.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 888DB110174D18AA009C5A97 /* oildrum.fbx */; };
+		888DB152174D18AA009C5A97 /* oildrum.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 888DB111174D18AA009C5A97 /* oildrum.mtl */; };
+		888DB153174D18AA009C5A97 /* oildrum.obj in Resources */ = {isa = PBXBuildFile; fileRef = 888DB112174D18AA009C5A97 /* oildrum.obj */; };
+		888DB154174D18AA009C5A97 /* Oildrum.ply in Resources */ = {isa = PBXBuildFile; fileRef = 888DB113174D18AA009C5A97 /* Oildrum.ply */; };
+		888DB155174D18AA009C5A97 /* Oildrum.stl in Resources */ = {isa = PBXBuildFile; fileRef = 888DB114174D18AA009C5A97 /* Oildrum.stl */; };
+		888DB156174D18AA009C5A97 /* oildrum.x3d in Resources */ = {isa = PBXBuildFile; fileRef = 888DB115174D18AA009C5A97 /* oildrum.x3d */; };
+		888DB157174D18AA009C5A97 /* oildrum_col.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888DB116174D18AA009C5A97 /* oildrum_col.jpg */; };
+		888DB158174D18AA009C5A97 /* oildrum_nor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 888DB117174D18AA009C5A97 /* oildrum_nor.jpg */; };
+		888DB159174D18AA009C5A97 /* soqc2y955x-oildrum.7z in Resources */ = {isa = PBXBuildFile; fileRef = 888DB118174D18AA009C5A97 /* soqc2y955x-oildrum.7z */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -802,6 +867,73 @@
 		888DB0C4174D05AE009C5A97 /* _D_viewer_3Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = _D_viewer_3Scene.h; path = Classes/_D_viewer_3Scene.h; sourceTree = "<group>"; };
 		888DB0C5174D05AE009C5A97 /* _D_viewer_3Scene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = _D_viewer_3Scene.m; path = Classes/_D_viewer_3Scene.m; sourceTree = "<group>"; };
 		888DB0C7174D05AE009C5A97 /* hello-world.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = "hello-world.pod"; path = "Resources/hello-world.pod"; sourceTree = "<group>"; };
+		888DB0CE174D0643009C5A97 /* pin_descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pin_descriptor.h; sourceTree = "<group>"; };
+		888DB0CF174D0643009C5A97 /* pin_descriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pin_descriptor.m; sourceTree = "<group>"; };
+		888DB0D0174D0643009C5A97 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
+		888DB0D1174D0643009C5A97 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		888DB0D4174D18AA009C5A97 /* skull2.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull2.pod; sourceTree = "<group>"; };
+		888DB0D5174D18AA009C5A97 /* skull1.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull1.pod; sourceTree = "<group>"; };
+		888DB0D6174D18AA009C5A97 /* Badblue-anim-noinvert-tryColor.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim-noinvert-tryColor.pod"; sourceTree = "<group>"; };
+		888DB0D7174D18AA009C5A97 /* Badblue-anim-noinvert.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim-noinvert.pod"; sourceTree = "<group>"; };
+		888DB0D8174D18AA009C5A97 /* Badblue-anim.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Badblue-anim.pod"; sourceTree = "<group>"; };
+		888DB0D9174D18AA009C5A97 /* Badblue.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Badblue.pod; sourceTree = "<group>"; };
+		888DB0DA174D18AA009C5A97 /* BadBlueDiffuse.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueDiffuse.tga; sourceTree = "<group>"; };
+		888DB0DB174D18AA009C5A97 /* BadBlueNormal.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueNormal.tga; sourceTree = "<group>"; };
+		888DB0DC174D18AA009C5A97 /* BadBlueSpecular.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueSpecular.tga; sourceTree = "<group>"; };
+		888DB0DD174D18AA009C5A97 /* Badblue_fly.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = Badblue_fly.dae; sourceTree = "<group>"; };
+		888DB0DF174D18AA009C5A97 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = readme.txt; sourceTree = "<group>"; };
+		888DB0E0174D18AA009C5A97 /* BadBlueDiffuse.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueDiffuse.tga; sourceTree = "<group>"; };
+		888DB0E1174D18AA009C5A97 /* BadBlueNormal.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueNormal.tga; sourceTree = "<group>"; };
+		888DB0E2174D18AA009C5A97 /* BadBlueSpecular.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadBlueSpecular.tga; sourceTree = "<group>"; };
+		888DB0E5174D18AA009C5A97 /* 1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = 1.dae; sourceTree = "<group>"; };
+		888DB0E6174D18AA009C5A97 /* 1.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.pod; sourceTree = "<group>"; };
+		888DB0E7174D18AA009C5A97 /* 2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = 2.dae; sourceTree = "<group>"; };
+		888DB0E8174D18AA009C5A97 /* 2.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.pod; sourceTree = "<group>"; };
+		888DB0E9174D18AA009C5A97 /* 3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = 3.dae; sourceTree = "<group>"; };
+		888DB0EA174D18AA009C5A97 /* 3.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.pod; sourceTree = "<group>"; };
+		888DB0EB174D18AA009C5A97 /* 4.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = 4.dae; sourceTree = "<group>"; };
+		888DB0EC174D18AA009C5A97 /* 4.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.pod; sourceTree = "<group>"; };
+		888DB0ED174D18AA009C5A97 /* DAEObjects.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = DAEObjects.rar; sourceTree = "<group>"; };
+		888DB0EE174D18AA009C5A97 /* skull.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = skull.dae; sourceTree = "<group>"; };
+		888DB0EF174D18AA009C5A97 /* skull.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull.pod; sourceTree = "<group>"; };
+		888DB0F1174D18AA009C5A97 /* Dragonscale.jpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dragonscale.jpg; sourceTree = "<group>"; };
+		888DB0F2174D18AA009C5A97 /* DragonScale_Soldier.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = DragonScale_Soldier.DAE; sourceTree = "<group>"; };
+		888DB0F3174D18AA009C5A97 /* DragonScale_Soldier.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = DragonScale_Soldier.pod; sourceTree = "<group>"; };
+		888DB0F4174D18AA009C5A97 /* Armor.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor.dds; sourceTree = "<group>"; };
+		888DB0F5174D18AA009C5A97 /* Armor_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor_m.dds; sourceTree = "<group>"; };
+		888DB0F6174D18AA009C5A97 /* Armor_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armor_n.dds; sourceTree = "<group>"; };
+		888DB0F7174D18AA009C5A97 /* Boots.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots.dds; sourceTree = "<group>"; };
+		888DB0F8174D18AA009C5A97 /* Boots_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots_m.dds; sourceTree = "<group>"; };
+		888DB0F9174D18AA009C5A97 /* Boots_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boots_n.dds; sourceTree = "<group>"; };
+		888DB0FA174D18AA009C5A97 /* EyeBrown.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown.dds; sourceTree = "<group>"; };
+		888DB0FB174D18AA009C5A97 /* EyeBrown_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown_n.dds; sourceTree = "<group>"; };
+		888DB0FC174D18AA009C5A97 /* EyeBrown_sk.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeBrown_sk.dds; sourceTree = "<group>"; };
+		888DB0FD174D18AA009C5A97 /* EyeCubeMap.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = EyeCubeMap.dds; sourceTree = "<group>"; };
+		888DB0FE174D18AA009C5A97 /* Gloves.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves.dds; sourceTree = "<group>"; };
+		888DB0FF174D18AA009C5A97 /* Gloves_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves_m.dds; sourceTree = "<group>"; };
+		888DB100174D18AA009C5A97 /* Gloves_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gloves_n.dds; sourceTree = "<group>"; };
+		888DB101174D18AA009C5A97 /* Helmet.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet.dds; sourceTree = "<group>"; };
+		888DB102174D18AA009C5A97 /* Helmet_m.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet_m.dds; sourceTree = "<group>"; };
+		888DB103174D18AA009C5A97 /* Helmet_n.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helmet_n.dds; sourceTree = "<group>"; };
+		888DB104174D18AA009C5A97 /* MaleHead.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaleHead.dds; sourceTree = "<group>"; };
+		888DB105174D18AA009C5A97 /* MaleHead_msn.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaleHead_msn.dds; sourceTree = "<group>"; };
+		888DB106174D18AA009C5A97 /* ShinyBright_e.dds */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShinyBright_e.dds; sourceTree = "<group>"; };
+		888DB108174D18AA009C5A97 /* mvvl9sie4i-DragonScaleSoldier.rar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mvvl9sie4i-DragonScaleSoldier.rar"; sourceTree = "<group>"; };
+		888DB10A174D18AA009C5A97 /* aperçu1.png */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aperçu1.png"; sourceTree = "<group>"; };
+		888DB10B174D18AA009C5A97 /* aperçu2.png */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aperçu2.png"; sourceTree = "<group>"; };
+		888DB10C174D18AA009C5A97 /* oilDrum-anim-noinvert-tryColor.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = "oilDrum-anim-noinvert-tryColor.pod"; sourceTree = "<group>"; };
+		888DB10D174D18AA009C5A97 /* oildrum.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = oildrum.3ds; sourceTree = "<group>"; };
+		888DB10E174D18AA009C5A97 /* Oildrum.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oildrum.blend; sourceTree = "<group>"; };
+		888DB10F174D18AA009C5A97 /* oildrum.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = oildrum.dae; sourceTree = "<group>"; };
+		888DB110174D18AA009C5A97 /* oildrum.fbx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = oildrum.fbx; sourceTree = "<group>"; };
+		888DB111174D18AA009C5A97 /* oildrum.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = oildrum.mtl; sourceTree = "<group>"; };
+		888DB112174D18AA009C5A97 /* oildrum.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = oildrum.obj; sourceTree = "<group>"; };
+		888DB113174D18AA009C5A97 /* Oildrum.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = Oildrum.ply; sourceTree = "<group>"; };
+		888DB114174D18AA009C5A97 /* Oildrum.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oildrum.stl; sourceTree = "<group>"; };
+		888DB115174D18AA009C5A97 /* oildrum.x3d */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = oildrum.x3d; sourceTree = "<group>"; };
+		888DB116174D18AA009C5A97 /* oildrum_col.jpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = oildrum_col.jpg; sourceTree = "<group>"; };
+		888DB117174D18AA009C5A97 /* oildrum_nor.jpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = oildrum_nor.jpg; sourceTree = "<group>"; };
+		888DB118174D18AA009C5A97 /* soqc2y955x-oildrum.7z */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soqc2y955x-oildrum.7z"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -873,6 +1005,7 @@
 		888DAD9B174D05A1009C5A97 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				888DB11A174D18AA009C5A97 /* 3D */,
 				888DAD9C174D05A1009C5A97 /* Default.png */,
 				888DAD9E174D05A1009C5A97 /* Default-Landscape~ipad.png */,
 				888DADA0174D05A1009C5A97 /* fps_images.png */,
@@ -1704,6 +1837,10 @@
 		888DB0BD174D05AE009C5A97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				888DB0CE174D0643009C5A97 /* pin_descriptor.h */,
+				888DB0CF174D0643009C5A97 /* pin_descriptor.m */,
+				888DB0D0174D0643009C5A97 /* Pin.h */,
+				888DB0D1174D0643009C5A97 /* Pin.m */,
 				888DB0BE174D05AE009C5A97 /* _D_viewer_3AppDelegate.h */,
 				888DB0BF174D05AE009C5A97 /* _D_viewer_3AppDelegate.m */,
 				888DB0C1174D05AE009C5A97 /* _D_viewer_3Layer.h */,
@@ -1712,6 +1849,133 @@
 				888DB0C5174D05AE009C5A97 /* _D_viewer_3Scene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		888DB0DE174D18AA009C5A97 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0DD174D18AA009C5A97 /* Badblue_fly.dae */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		888DB0E3174D18AA009C5A97 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0E0174D18AA009C5A97 /* BadBlueDiffuse.tga */,
+				888DB0E1174D18AA009C5A97 /* BadBlueNormal.tga */,
+				888DB0E2174D18AA009C5A97 /* BadBlueSpecular.tga */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		888DB0E4174D18AA009C5A97 /* Badblue_fly.dae */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0D6174D18AA009C5A97 /* Badblue-anim-noinvert-tryColor.pod */,
+				888DB0D7174D18AA009C5A97 /* Badblue-anim-noinvert.pod */,
+				888DB0D8174D18AA009C5A97 /* Badblue-anim.pod */,
+				888DB0D9174D18AA009C5A97 /* Badblue.pod */,
+				888DB0DA174D18AA009C5A97 /* BadBlueDiffuse.tga */,
+				888DB0DB174D18AA009C5A97 /* BadBlueNormal.tga */,
+				888DB0DC174D18AA009C5A97 /* BadBlueSpecular.tga */,
+				888DB0DE174D18AA009C5A97 /* models */,
+				888DB0DF174D18AA009C5A97 /* readme.txt */,
+				888DB0E3174D18AA009C5A97 /* Textures */,
+			);
+			path = Badblue_fly.dae;
+			sourceTree = "<group>";
+		};
+		888DB0F0174D18AA009C5A97 /* daeobjects */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0E5174D18AA009C5A97 /* 1.dae */,
+				888DB0E6174D18AA009C5A97 /* 1.pod */,
+				888DB0E7174D18AA009C5A97 /* 2.dae */,
+				888DB0E8174D18AA009C5A97 /* 2.pod */,
+				888DB0E9174D18AA009C5A97 /* 3.dae */,
+				888DB0EA174D18AA009C5A97 /* 3.pod */,
+				888DB0EB174D18AA009C5A97 /* 4.dae */,
+				888DB0EC174D18AA009C5A97 /* 4.pod */,
+				888DB0ED174D18AA009C5A97 /* DAEObjects.rar */,
+				888DB0EE174D18AA009C5A97 /* skull.dae */,
+				888DB0EF174D18AA009C5A97 /* skull.pod */,
+			);
+			path = daeobjects;
+			sourceTree = "<group>";
+		};
+		888DB107174D18AA009C5A97 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0F4174D18AA009C5A97 /* Armor.dds */,
+				888DB0F5174D18AA009C5A97 /* Armor_m.dds */,
+				888DB0F6174D18AA009C5A97 /* Armor_n.dds */,
+				888DB0F7174D18AA009C5A97 /* Boots.dds */,
+				888DB0F8174D18AA009C5A97 /* Boots_m.dds */,
+				888DB0F9174D18AA009C5A97 /* Boots_n.dds */,
+				888DB0FA174D18AA009C5A97 /* EyeBrown.dds */,
+				888DB0FB174D18AA009C5A97 /* EyeBrown_n.dds */,
+				888DB0FC174D18AA009C5A97 /* EyeBrown_sk.dds */,
+				888DB0FD174D18AA009C5A97 /* EyeCubeMap.dds */,
+				888DB0FE174D18AA009C5A97 /* Gloves.dds */,
+				888DB0FF174D18AA009C5A97 /* Gloves_m.dds */,
+				888DB100174D18AA009C5A97 /* Gloves_n.dds */,
+				888DB101174D18AA009C5A97 /* Helmet.dds */,
+				888DB102174D18AA009C5A97 /* Helmet_m.dds */,
+				888DB103174D18AA009C5A97 /* Helmet_n.dds */,
+				888DB104174D18AA009C5A97 /* MaleHead.dds */,
+				888DB105174D18AA009C5A97 /* MaleHead_msn.dds */,
+				888DB106174D18AA009C5A97 /* ShinyBright_e.dds */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		888DB109174D18AA009C5A97 /* dragonscale */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0F1174D18AA009C5A97 /* Dragonscale.jpg */,
+				888DB0F2174D18AA009C5A97 /* DragonScale_Soldier.DAE */,
+				888DB0F3174D18AA009C5A97 /* DragonScale_Soldier.pod */,
+				888DB107174D18AA009C5A97 /* images */,
+				888DB108174D18AA009C5A97 /* mvvl9sie4i-DragonScaleSoldier.rar */,
+			);
+			path = dragonscale;
+			sourceTree = "<group>";
+		};
+		888DB119174D18AA009C5A97 /* oilDrum */ = {
+			isa = PBXGroup;
+			children = (
+				888DB10A174D18AA009C5A97 /* aperçu1.png */,
+				888DB10B174D18AA009C5A97 /* aperçu2.png */,
+				888DB10C174D18AA009C5A97 /* oilDrum-anim-noinvert-tryColor.pod */,
+				888DB10D174D18AA009C5A97 /* oildrum.3ds */,
+				888DB10E174D18AA009C5A97 /* Oildrum.blend */,
+				888DB10F174D18AA009C5A97 /* oildrum.dae */,
+				888DB110174D18AA009C5A97 /* oildrum.fbx */,
+				888DB111174D18AA009C5A97 /* oildrum.mtl */,
+				888DB112174D18AA009C5A97 /* oildrum.obj */,
+				888DB113174D18AA009C5A97 /* Oildrum.ply */,
+				888DB114174D18AA009C5A97 /* Oildrum.stl */,
+				888DB115174D18AA009C5A97 /* oildrum.x3d */,
+				888DB116174D18AA009C5A97 /* oildrum_col.jpg */,
+				888DB117174D18AA009C5A97 /* oildrum_nor.jpg */,
+				888DB118174D18AA009C5A97 /* soqc2y955x-oildrum.7z */,
+			);
+			path = oilDrum;
+			sourceTree = "<group>";
+		};
+		888DB11A174D18AA009C5A97 /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				888DB0D4174D18AA009C5A97 /* skull2.pod */,
+				888DB0D5174D18AA009C5A97 /* skull1.pod */,
+				888DB0E4174D18AA009C5A97 /* Badblue_fly.dae */,
+				888DB0F0174D18AA009C5A97 /* daeobjects */,
+				888DB109174D18AA009C5A97 /* dragonscale */,
+				888DB119174D18AA009C5A97 /* oilDrum */,
+			);
+			name = 3D;
+			path = "../../3D Viewer 2/3D Viewer 2/Resources/3D";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1797,6 +2061,69 @@
 				888DB0B5174D05AE009C5A97 /* CC3SingleTextureReflectAlphaTest.fsh in Resources */,
 				888DB0B7174D05AE009C5A97 /* CC3TexturableMaterial.vsh in Resources */,
 				888DB0C8174D05AE009C5A97 /* hello-world.pod in Resources */,
+				888DB11B174D18AA009C5A97 /* skull2.pod in Resources */,
+				888DB11C174D18AA009C5A97 /* skull1.pod in Resources */,
+				888DB11D174D18AA009C5A97 /* Badblue-anim-noinvert-tryColor.pod in Resources */,
+				888DB11E174D18AA009C5A97 /* Badblue-anim-noinvert.pod in Resources */,
+				888DB11F174D18AA009C5A97 /* Badblue-anim.pod in Resources */,
+				888DB120174D18AA009C5A97 /* Badblue.pod in Resources */,
+				888DB121174D18AA009C5A97 /* BadBlueDiffuse.tga in Resources */,
+				888DB122174D18AA009C5A97 /* BadBlueNormal.tga in Resources */,
+				888DB123174D18AA009C5A97 /* BadBlueSpecular.tga in Resources */,
+				888DB124174D18AA009C5A97 /* Badblue_fly.dae in Resources */,
+				888DB125174D18AA009C5A97 /* readme.txt in Resources */,
+				888DB126174D18AA009C5A97 /* BadBlueDiffuse.tga in Resources */,
+				888DB127174D18AA009C5A97 /* BadBlueNormal.tga in Resources */,
+				888DB128174D18AA009C5A97 /* BadBlueSpecular.tga in Resources */,
+				888DB129174D18AA009C5A97 /* 1.dae in Resources */,
+				888DB12A174D18AA009C5A97 /* 1.pod in Resources */,
+				888DB12B174D18AA009C5A97 /* 2.dae in Resources */,
+				888DB12C174D18AA009C5A97 /* 2.pod in Resources */,
+				888DB12D174D18AA009C5A97 /* 3.dae in Resources */,
+				888DB12E174D18AA009C5A97 /* 3.pod in Resources */,
+				888DB12F174D18AA009C5A97 /* 4.dae in Resources */,
+				888DB130174D18AA009C5A97 /* 4.pod in Resources */,
+				888DB131174D18AA009C5A97 /* DAEObjects.rar in Resources */,
+				888DB132174D18AA009C5A97 /* skull.dae in Resources */,
+				888DB133174D18AA009C5A97 /* skull.pod in Resources */,
+				888DB134174D18AA009C5A97 /* Dragonscale.jpg in Resources */,
+				888DB135174D18AA009C5A97 /* DragonScale_Soldier.DAE in Resources */,
+				888DB136174D18AA009C5A97 /* DragonScale_Soldier.pod in Resources */,
+				888DB137174D18AA009C5A97 /* Armor.dds in Resources */,
+				888DB138174D18AA009C5A97 /* Armor_m.dds in Resources */,
+				888DB139174D18AA009C5A97 /* Armor_n.dds in Resources */,
+				888DB13A174D18AA009C5A97 /* Boots.dds in Resources */,
+				888DB13B174D18AA009C5A97 /* Boots_m.dds in Resources */,
+				888DB13C174D18AA009C5A97 /* Boots_n.dds in Resources */,
+				888DB13D174D18AA009C5A97 /* EyeBrown.dds in Resources */,
+				888DB13E174D18AA009C5A97 /* EyeBrown_n.dds in Resources */,
+				888DB13F174D18AA009C5A97 /* EyeBrown_sk.dds in Resources */,
+				888DB140174D18AA009C5A97 /* EyeCubeMap.dds in Resources */,
+				888DB141174D18AA009C5A97 /* Gloves.dds in Resources */,
+				888DB142174D18AA009C5A97 /* Gloves_m.dds in Resources */,
+				888DB143174D18AA009C5A97 /* Gloves_n.dds in Resources */,
+				888DB144174D18AA009C5A97 /* Helmet.dds in Resources */,
+				888DB145174D18AA009C5A97 /* Helmet_m.dds in Resources */,
+				888DB146174D18AA009C5A97 /* Helmet_n.dds in Resources */,
+				888DB147174D18AA009C5A97 /* MaleHead.dds in Resources */,
+				888DB148174D18AA009C5A97 /* MaleHead_msn.dds in Resources */,
+				888DB149174D18AA009C5A97 /* ShinyBright_e.dds in Resources */,
+				888DB14A174D18AA009C5A97 /* mvvl9sie4i-DragonScaleSoldier.rar in Resources */,
+				888DB14B174D18AA009C5A97 /* aperçu1.png in Resources */,
+				888DB14C174D18AA009C5A97 /* aperçu2.png in Resources */,
+				888DB14D174D18AA009C5A97 /* oilDrum-anim-noinvert-tryColor.pod in Resources */,
+				888DB14E174D18AA009C5A97 /* oildrum.3ds in Resources */,
+				888DB14F174D18AA009C5A97 /* Oildrum.blend in Resources */,
+				888DB150174D18AA009C5A97 /* oildrum.dae in Resources */,
+				888DB151174D18AA009C5A97 /* oildrum.fbx in Resources */,
+				888DB152174D18AA009C5A97 /* oildrum.mtl in Resources */,
+				888DB153174D18AA009C5A97 /* oildrum.obj in Resources */,
+				888DB154174D18AA009C5A97 /* Oildrum.ply in Resources */,
+				888DB155174D18AA009C5A97 /* Oildrum.stl in Resources */,
+				888DB156174D18AA009C5A97 /* oildrum.x3d in Resources */,
+				888DB157174D18AA009C5A97 /* oildrum_col.jpg in Resources */,
+				888DB158174D18AA009C5A97 /* oildrum_nor.jpg in Resources */,
+				888DB159174D18AA009C5A97 /* soqc2y955x-oildrum.7z in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,6 +2352,8 @@
 				888DB0C0174D05AE009C5A97 /* _D_viewer_3AppDelegate.m in Sources */,
 				888DB0C3174D05AE009C5A97 /* _D_viewer_3Layer.m in Sources */,
 				888DB0C6174D05AE009C5A97 /* _D_viewer_3Scene.m in Sources */,
+				888DB0D2174D0643009C5A97 /* pin_descriptor.m in Sources */,
+				888DB0D3174D0643009C5A97 /* Pin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2053,7 +2382,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -2082,7 +2411,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-all_load",

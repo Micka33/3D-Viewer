@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8819616F17282F5700AD2AF8 /* skull1.pod in Resources */ = {isa = PBXBuildFile; fileRef = 8819616E17282F5700AD2AF8 /* skull1.pod */; };
 		881961711729383B00AD2AF8 /* skull2.pod in Resources */ = {isa = PBXBuildFile; fileRef = 881961701729383B00AD2AF8 /* skull2.pod */; };
+		881961781729890600AD2AF8 /* pin_descriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 881961751729890400AD2AF8 /* pin_descriptor.m */; };
+		881961791729890600AD2AF8 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 881961771729890500AD2AF8 /* Pin.m */; };
 		8863AA90171D856B0091975F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8863AA8F171D856B0091975F /* QuartzCore.framework */; };
 		8863AA92171D856B0091975F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8863AA91171D856B0091975F /* OpenGLES.framework */; };
 		8863AA94171D856B0091975F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8863AA93171D856B0091975F /* OpenAL.framework */; };
@@ -328,6 +330,10 @@
 /* Begin PBXFileReference section */
 		8819616E17282F5700AD2AF8 /* skull1.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull1.pod; sourceTree = "<group>"; };
 		881961701729383B00AD2AF8 /* skull2.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = skull2.pod; sourceTree = "<group>"; };
+		881961741729890400AD2AF8 /* pin_descriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pin_descriptor.h; path = Classes/pin_descriptor.h; sourceTree = "<group>"; };
+		881961751729890400AD2AF8 /* pin_descriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = pin_descriptor.m; path = Classes/pin_descriptor.m; sourceTree = "<group>"; };
+		881961761729890400AD2AF8 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pin.h; path = Classes/Pin.h; sourceTree = "<group>"; };
+		881961771729890500AD2AF8 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pin.m; path = Classes/Pin.m; sourceTree = "<group>"; };
 		8863AA8C171D856B0091975F /* 3D Viewer 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3D Viewer 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8863AA8F171D856B0091975F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8863AA91171D856B0091975F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1776,6 +1782,10 @@
 		8863ADAB171D85740091975F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				881961741729890400AD2AF8 /* pin_descriptor.h */,
+				881961751729890400AD2AF8 /* pin_descriptor.m */,
+				881961761729890400AD2AF8 /* Pin.h */,
+				881961771729890500AD2AF8 /* Pin.m */,
 				8863ADAC171D85740091975F /* _D_Viewer_2AppDelegate.h */,
 				8863ADAD171D85740091975F /* _D_Viewer_2AppDelegate.m */,
 				8863ADAF171D85740091975F /* _D_Viewer_2Layer.h */,
@@ -2280,6 +2290,8 @@
 				8863ADAE171D85740091975F /* _D_Viewer_2AppDelegate.m in Sources */,
 				8863ADB1171D85740091975F /* _D_Viewer_2Layer.m in Sources */,
 				8863ADB4171D85740091975F /* _D_Viewer_2Scene.m in Sources */,
+				881961781729890600AD2AF8 /* pin_descriptor.m in Sources */,
+				881961791729890600AD2AF8 /* Pin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
