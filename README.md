@@ -23,7 +23,7 @@ This script will install COCOS3D with COCOS2D.
 
 You can then launch xcode using COCOS3D/cocos3D.xcworkspace and run 3D Viewer 3.
 
-About the code
+About the code (V2)
 =================
 
 The scene is initialized in _D_Viewer_3Scene.m:
@@ -144,7 +144,21 @@ RotationXYRate = 1/1.7;
 ```
 
 
+How are the pins processed
+=================
 
+ -  In Flare3D:
+    big object -> `scale` to small -> user set new pin -> apply pin -> save pin coords without `scale`
+
+    Pins are saved with a position and a rotation (we should try to save the real position instead of these two)
+
+ -  In Cocos3D:
+    big object -> `scale` to small -> apply previously saved pin with current `scale`
+
+    Pins are set following these steps:
+     - apply rotation on the container
+     - set the pin at position
+     - set the container back to its original rotation
 
 
 
