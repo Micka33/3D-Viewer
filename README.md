@@ -161,7 +161,7 @@ How are the pins processed
      - set the container back to its original rotation
 
 
+About the pod converting
+=================
 
-
-
-
+http://brenwill.com/2011/cocos3d-importing-converting-collada-to-pod/
